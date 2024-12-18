@@ -9,7 +9,7 @@ import random
 #logging.basicConfig(level=logging.INFO)
 
 class Simulation:
-    def __init__(self, num_agents, render=True, rgb_array=False):
+    def __init__(self, num_agents, render=False, rgb_array=False):
         self.render = render
         self.rgb_array = rgb_array
         if render:

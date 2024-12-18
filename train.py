@@ -17,12 +17,15 @@ task = Task.init(
 task.set_base_docker("deanis/2023y2b-rl:latest")
 task.execute_remotely(queue_name="default")
 
+def log_to_clearml(step, metric_name, value):
+    task.get_logger().report_scalar(metric_name, "value", value=value, iteration=step)
+
 # WandB initialization
 os.environ['WANDB_API_KEY'] = 'cf5a05958641f64764dafe6badc9e911b54d9644'
 run = wandb.init(project="ot2_digital_twin", sync_tensorboard=True)
 
 # ----------------- Environment Setup -----------------
-env = OT2Env()  # Assuming `render` is a parameter in OT2Env
+env = OT2Env(render=False)  # Assuming `render` is a parameter in OT2Env
 
 # ----------------- Argument Parsing -----------------
 parser = argparse.ArgumentParser()
@@ -57,18 +60,23 @@ class CustomWandbCallback(BaseCallback):
         self.success_rate = []
 
     def _on_step(self) -> bool:
-        # Collect episode rewards and lengths
-        if 'episode' in self.locals:
-            episode_info = self.locals['infos'][0].get('episode', {})
+        # Check if 'infos' exists in self.locals
+        if 'infos' in self.locals and len(self.locals['infos']) > 0:
+            episode_info = self.locals['infos'][0].get('episode', {})  # Safely extract episode info
+
+            # Log episode rewards
             if 'r' in episode_info:  # Episode reward
                 self.episode_rewards.append(episode_info['r'])
                 wandb.log({"episode_reward": episode_info['r']}, step=self.num_timesteps)
+                log_to_clearml(self.num_timesteps, "episode_reward", episode_info['r'])
+
+            # Log episode lengths
             if 'l' in episode_info:  # Episode length
                 self.episode_lengths.append(episode_info['l'])
                 wandb.log({"episode_length": episode_info['l']}, step=self.num_timesteps)
 
         # Success rate logging (if available in env info)
-        success = self.locals['infos'][0].get('success', None)
+        success = self.locals['infos'][0].get('success', None) if 'infos' in self.locals else None
         if success is not None:
             self.success_rate.append(success)
             wandb.log({"success_rate": np.mean(self.success_rate)}, step=self.num_timesteps)
@@ -82,6 +90,7 @@ class CustomWandbCallback(BaseCallback):
         wandb.log({"learning_rate": self.model.learning_rate}, step=self.num_timesteps)
 
         return True
+
 
     def _on_training_end(self) -> None:
         # Log aggregate statistics at the end of training
