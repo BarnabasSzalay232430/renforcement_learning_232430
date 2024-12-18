@@ -25,6 +25,7 @@ os.environ['WANDB_API_KEY'] = 'cf5a05958641f64764dafe6badc9e911b54d9644'
 run = wandb.init(project="ot2_digital_twin", sync_tensorboard=True)
 
 # ----------------- Environment Setup -----------------
+# Wrap the environment with VecNormalize for observation and reward normalization
 env = DummyVecEnv([lambda: OT2Env(render=False)])
 env = VecNormalize(env, norm_obs=True, norm_reward=True, clip_obs=10.0)
 
@@ -57,32 +58,23 @@ model_dir = f"models/{run.id}"
 os.makedirs(model_dir, exist_ok=True)
 
 # ----------------- Callbacks -----------------
-class CustomWandbCallback(BaseCallback):
+class CustomRewardLoggingCallback(BaseCallback):
     def __init__(self, verbose=0):
-        super(CustomWandbCallback, self).__init__(verbose)
-        self.episode_rewards = []
-        self.episode_lengths = []
+        super(CustomRewardLoggingCallback, self).__init__(verbose)
+        self.rewards = []
 
     def _on_step(self) -> bool:
-        # Check if 'infos' exists in self.locals
-        if 'infos' in self.locals and len(self.locals['infos']) > 0:
-            episode_info = self.locals['infos'][0].get('episode', {})  # Safely extract episode info
-
-            # Log episode rewards
-            if 'r' in episode_info:  # Episode reward
-                self.episode_rewards.append(episode_info['r'])
-                mean_reward = np.mean(self.episode_rewards[-100:])  # Mean of the last 100 rewards
-                wandb.log({"mean_reward": mean_reward}, step=self.num_timesteps)
-                log_to_clearml(self.num_timesteps, "mean_reward", mean_reward)
-
+        if "rewards" in self.locals:
+            reward = self.locals["rewards"][0]
+            self.rewards.append(reward)
+            avg_reward = np.mean(self.rewards[-100:])  # Rolling average of last 100 rewards
+            wandb.log({"average_reward": avg_reward}, step=self.num_timesteps)
+            log_to_clearml(self.num_timesteps, "average_reward", avg_reward)
         return True
 
     def _on_training_end(self) -> None:
-        # Log aggregate statistics at the end of training
-        wandb.log({
-            "average_episode_reward": np.mean(self.episode_rewards),
-            "average_episode_length": np.mean(self.episode_lengths),
-        })
+        overall_avg_reward = np.mean(self.rewards)
+        wandb.log({"final_average_reward": overall_avg_reward})
 
 # Instantiate callbacks
 wandb_callback = WandbCallback(
@@ -90,25 +82,28 @@ wandb_callback = WandbCallback(
     model_save_path=model_dir,
     verbose=2
 )
-custom_wandb_callback = CustomWandbCallback()
+custom_reward_logging_callback = CustomRewardLoggingCallback()
 
 # ----------------- Training Loop -----------------
 time_steps_per_iter = 100000
-num_iterations = 10
+num_iterations = 15
 
 for iteration in range(1, num_iterations + 1):
     print(f"Starting iteration {iteration}")
-    
+
     # Train the model
     model.learn(
         total_timesteps=time_steps_per_iter,
-        callback=[wandb_callback, custom_wandb_callback],
+        callback=[wandb_callback, custom_reward_logging_callback],
         progress_bar=True,
         reset_num_timesteps=False,
-        tb_log_name=f"runs/{run.id}_iter_{iteration}",
+        tb_log_name=f"run_{run.id}_iter_{iteration}",
     )
 
     # Save the model after each iteration
     model_path = f"{model_dir}/model_step_{time_steps_per_iter * iteration}"
     model.save(model_path)
     print(f"Model saved at iteration {iteration}: {model_path}")
+
+# Final message
+print("Training complete. Models and logs are saved.")
