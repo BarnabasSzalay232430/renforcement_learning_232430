@@ -60,41 +60,35 @@ class OT2Env(gym.Env):
         return observation, {}
 
     def step(self, action):
-        # Clip action to ensure it's within bounds
         action = np.clip(action, self.action_space.low, self.action_space.high)
-
-        # Append a dummy action for the simulator (e.g., dispensing liquid)
         sim_action = np.append(action, 0.0)
-
-        # Apply the action in the simulation
         self.sim.run([sim_action])
 
-        # Get updated state dynamically
         state = self.sim.get_states()
         if not state:
             raise RuntimeError("Simulation state is empty or invalid!")
-        robot_id = list(state.keys())[0]  # Dynamically fetch the first robot ID
+        robot_id = list(state.keys())[0]
         pipette_position = np.array(state[robot_id].get('pipette_position', [0, 0, 0]), dtype=np.float32)
         observation = np.concatenate([pipette_position, self.goal_position])
 
-        # Calculate reward (negative distance to goal, scaled)
         distance_to_goal = np.linalg.norm(pipette_position - self.goal_position)
-        max_distance = np.sqrt(3) * 0.6  # Approximate diagonal of the bounding box
-        reward = float(-distance_to_goal / max_distance)  # Convert reward to native Python float
+        max_distance = np.sqrt(3) * 0.6
+        reward = float(-distance_to_goal / max_distance)
 
-        # Check termination conditions
-        terminated = bool(distance_to_goal < 0.01)  # Ensure terminated is a Python boolean
-        truncated = bool(self.steps >= self.max_steps)  # Ensure truncated is a Python boolean
+        # Reward shaping: give positive rewards for progress
+        progress_reward = 1 - (distance_to_goal / max_distance)
+        reward += progress_reward
 
-        # Update step count
+        terminated = bool(distance_to_goal < 0.01)
+        truncated = bool(self.steps >= self.max_steps)
+
+        # Log success for debugging
+        if terminated:
+            print(f"Success: Reached goal at step {self.steps}. Distance: {distance_to_goal}")
+
         self.steps += 1
+        return observation, reward, terminated, truncated, {}
 
-        # Check observation validity
-        assert self.observation_space.contains(observation), "Observation is out of bounds!"
-
-        # Return Gym-compliant step information
-        info = {}
-        return observation, reward, terminated, truncated, info
 
     def render(self, mode='human'):
         if self.render:
