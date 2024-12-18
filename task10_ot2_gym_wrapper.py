@@ -52,7 +52,7 @@ class OT2Env(gym.Env):
         observation = np.concatenate([pipette_position, self.goal_position])
 
         # Check observation validity
-        assert self.observation_space.contains(observation), "Observation is out of bounds!"
+        assert self.observation_space.contains(observation), "Observation is out of bounds"
 
         self.steps = 0
 
