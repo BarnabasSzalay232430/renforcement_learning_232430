@@ -62,34 +62,34 @@ class CustomWandbCallback(BaseCallback):
         super(CustomWandbCallback, self).__init__(verbose)
         self.episode_rewards = []
         self.episode_lengths = []
-        self.success_rate = []
 
     def _on_step(self) -> bool:
+        # Check if 'infos' exists in self.locals
         if 'infos' in self.locals and len(self.locals['infos']) > 0:
-            episode_info = self.locals['infos'][0].get('episode', {})
+            episode_info = self.locals['infos'][0].get('episode', {})  # Safely extract episode info
+
+            # Log episode rewards
             if 'r' in episode_info:  # Episode reward
                 self.episode_rewards.append(episode_info['r'])
-                wandb.log({"episode_reward": episode_info['r']}, step=self.num_timesteps)
-                log_to_clearml(self.num_timesteps, "episode_reward", episode_info['r'])
-            if 'l' in episode_info:  # Episode length
-                self.episode_lengths.append(episode_info['l'])
-                wandb.log({"episode_length": episode_info['l']}, step=self.num_timesteps)
-
-        success = self.locals['infos'][0].get('success', None) if 'infos' in self.locals else None
-        if success is not None:
-            self.success_rate.append(success)
-            wandb.log({"success_rate": np.mean(self.success_rate)}, step=self.num_timesteps)
+                mean_reward = np.mean(self.episode_rewards[-100:])  # Mean of the last 100 rewards
+                wandb.log({"mean_reward": mean_reward}, step=self.num_timesteps)
+                log_to_clearml(self.num_timesteps, "mean_reward", mean_reward)
 
         return True
 
     def _on_training_end(self) -> None:
+        # Log aggregate statistics at the end of training
         wandb.log({
             "average_episode_reward": np.mean(self.episode_rewards),
             "average_episode_length": np.mean(self.episode_lengths),
-            "success_rate": np.mean(self.success_rate)
         })
 
-wandb_callback = WandbCallback(model_save_freq=1000, model_save_path=model_dir, verbose=2)
+# Instantiate callbacks
+wandb_callback = WandbCallback(
+    model_save_freq=1000,
+    model_save_path=model_dir,
+    verbose=2
+)
 custom_wandb_callback = CustomWandbCallback()
 
 # ----------------- Training Loop -----------------
@@ -98,6 +98,8 @@ num_iterations = 10
 
 for iteration in range(1, num_iterations + 1):
     print(f"Starting iteration {iteration}")
+    
+    # Train the model
     model.learn(
         total_timesteps=time_steps_per_iter,
         callback=[wandb_callback, custom_wandb_callback],
@@ -105,9 +107,8 @@ for iteration in range(1, num_iterations + 1):
         reset_num_timesteps=False,
         tb_log_name=f"runs/{run.id}_iter_{iteration}",
     )
+
+    # Save the model after each iteration
     model_path = f"{model_dir}/model_step_{time_steps_per_iter * iteration}"
     model.save(model_path)
     print(f"Model saved at iteration {iteration}: {model_path}")
-
-env.save(f"{model_dir}/vec_normalize.pkl")
-print("Training complete. Models and logs saved.")
