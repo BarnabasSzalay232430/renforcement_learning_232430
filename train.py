@@ -44,14 +44,15 @@ model = PPO(
     "MlpPolicy",
     env,
     verbose=1,
-    learning_rate=0.0001,  # Smaller learning rate
-    batch_size=512,  # Large batch size
-    n_steps=1024,  # Frequent updates
-    n_epochs=20,  # Thorough updates
-    gamma=0.99,  # Default
+    learning_rate=0.0003,  # Default
+    batch_size=64,  # Default
+    n_steps=2048,  # Default
+    n_epochs=15,  # Slightly higher epochs
+    gamma=0.995,  # Higher discount factor
     clip_range=0.2,  # Default
-    tensorboard_log=f"runs/model_v2",
+    tensorboard_log=f"runs/model_v3",
 )
+
 
 
 # Directory for saving models
