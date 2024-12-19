@@ -45,13 +45,15 @@ model = PPO(
     env,
     verbose=1,
     learning_rate=0.0003,  # Default
-    batch_size=32,  # Smaller batch size
+    batch_size=64,  # Default
     n_steps=2048,  # Default
     n_epochs=10,  # Default
     gamma=0.99,  # Default
-    clip_range=0.1,  # Tighter clipping
-    tensorboard_log=f"runs/model_v4",
+    clip_range=0.2,  # Default
+    ent_coef=0.01,  # Increased entropy coefficient
+    tensorboard_log=f"runs/model_v5",
 )
+
 
 
 
@@ -89,7 +91,7 @@ custom_reward_logging_callback = CustomRewardLoggingCallback()
 
 # ----------------- Training Loop -----------------
 time_steps_per_iter = 100000
-num_iterations = 15
+num_iterations = 30
 
 for iteration in range(1, num_iterations + 1):
     print(f"Starting iteration {iteration}")
