@@ -44,13 +44,13 @@ model = PPO(
     "MlpPolicy",
     env,
     verbose=1,
-    learning_rate=0.001,  # Increased learning rate
-    batch_size=128,  # Medium-sized batches
-    n_steps=4096,  # Larger steps
-    n_epochs=5,  # Fewer epochs
+    learning_rate=0.0001,  # Smaller learning rate
+    batch_size=512,  # Large batch size
+    n_steps=1024,  # Frequent updates
+    n_epochs=20,  # Thorough updates
     gamma=0.99,  # Default
     clip_range=0.2,  # Default
-    tensorboard_log=f"runs/model_v1",
+    tensorboard_log=f"runs/model_v2",
 )
 
 
