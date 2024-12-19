@@ -45,13 +45,14 @@ model = PPO(
     env,
     verbose=1,
     learning_rate=0.0003,  # Default
-    batch_size=64,  # Default
+    batch_size=32,  # Smaller batch size
     n_steps=2048,  # Default
-    n_epochs=15,  # Slightly higher epochs
-    gamma=0.995,  # Higher discount factor
-    clip_range=0.2,  # Default
-    tensorboard_log=f"runs/model_v3",
+    n_epochs=10,  # Default
+    gamma=0.99,  # Default
+    clip_range=0.1,  # Tighter clipping
+    tensorboard_log=f"runs/model_v4",
 )
+
 
 
 
