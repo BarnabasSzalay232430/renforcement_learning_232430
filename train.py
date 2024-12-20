@@ -44,14 +44,14 @@ model = PPO(
     "MlpPolicy",
     env,
     verbose=1,
-    learning_rate=0.0003,  # Default
-    batch_size=64,  # Default
-    n_steps=2048,  # Default
-    n_epochs=10,  # Default
-    gamma=0.99,  # Default
-    clip_range=0.2,  # Default
-    ent_coef=0.01,  # Increased entropy coefficient
-    tensorboard_log=f"runs/model_v5",
+    learning_rate=0.0003,
+    batch_size=64,
+    n_steps=2048,
+    n_epochs=10,
+    gamma=0.99,
+    clip_range=0.2,
+    ent_coef=0.02,  # Slightly increased for more exploration
+    tensorboard_log=f"runs/model_v5_adjusted",
 )
 
 
