@@ -46,16 +46,13 @@ model = PPO(
     verbose=1,
     learning_rate=0.0003,
     batch_size=64,
-    n_steps=2048,
+    n_steps=1024,  # Reduced for more frequent updates
     n_epochs=10,
     gamma=0.99,
     clip_range=0.2,
-    ent_coef=0.02,  # Slightly increased for more exploration
+    ent_coef=0.01,
     tensorboard_log=f"runs/model_v5_adjusted",
 )
-
-
-
 
 
 # Directory for saving models
