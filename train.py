@@ -4,7 +4,6 @@ import numpy as np
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.vec_env import VecNormalize, DummyVecEnv
-from stable_baselines3.common.utils import linear_schedule
 
 import wandb
 from wandb.integration.sb3 import WandbCallback
