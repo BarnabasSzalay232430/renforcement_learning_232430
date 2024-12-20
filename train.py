@@ -4,6 +4,8 @@ import numpy as np
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.vec_env import VecNormalize, DummyVecEnv
+from stable_baselines3.common.utils import linear_schedule
+
 import wandb
 from wandb.integration.sb3 import WandbCallback
 from clearml import Task
@@ -44,9 +46,9 @@ model = PPO(
     "MlpPolicy",
     env,
     verbose=1,
-    learning_rate=0.0003,
+    learning_rate=linear_schedule(0.0003),  # Linear decay from 0.0003
     batch_size=64,
-    n_steps=1024,  # Reduced for more frequent updates
+    n_steps=2048,
     n_epochs=10,
     gamma=0.99,
     clip_range=0.2,
