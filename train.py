@@ -41,6 +41,18 @@ parser.add_argument("--gamma", type=float, default=0.99, help="Discount factor f
 parser.add_argument("--clip_range", type=float, default=0.2, help="Clipping range for PPO")
 args, _ = parser.parse_known_args()
 
+def linear_schedule(initial_value):
+    """
+    Linear learning rate schedule.
+    :param initial_value: (float) Initial learning rate.
+    :return: (function) Schedule that computes the current learning rate depending on the remaining progress
+    """
+    def func(progress_remaining):
+        # progress_remaining decreases from 1 (beginning) to 0 (end)
+        return progress_remaining * initial_value
+    return func
+
+
 # ----------------- PPO Model Setup -----------------
 model = PPO(
     "MlpPolicy",
@@ -55,6 +67,7 @@ model = PPO(
     ent_coef=0.01,
     tensorboard_log=f"runs/model_v5_adjusted",
 )
+
 
 
 # Directory for saving models
