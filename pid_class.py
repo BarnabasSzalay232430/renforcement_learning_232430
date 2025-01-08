@@ -7,6 +7,7 @@ class PIDController:
         self.integral = 0.0
         self.previous_error = 0.0
         self.integral_limit = integral_limit  # Maximum allowable value for the integral term
+        self.setpoint = 0.0  # Initialize the setpoint attribute
 
     def compute(self, current_value):
         error = self.setpoint - current_value
@@ -32,4 +33,3 @@ class PIDController:
         integral = self.Ki * self.integral  # Use the existing integral state
         derivative = self.Kd * (error - self.previous_error) / self.dt
         return proportional, integral, derivative
-
