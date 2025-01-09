@@ -5,7 +5,7 @@ import math
 import logging
 import os
 import random
-from pid_controller import PIDController  # Import PIDController
+from pid_class import PIDController  # Import PIDController
 
 class Simulation:
     def __init__(self, num_agents, render=False, rgb_array=False, pid_params=None):
