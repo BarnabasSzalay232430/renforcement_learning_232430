@@ -13,7 +13,9 @@ os.chdir(script_dir)
 print("Current working directory:", os.getcwd())
 
 class OT2Env(gym.Env):
-    def __init__(self, render=False, max_steps=1000, normalize_rewards=True):
+    def __init__(self, initial_position=np.array([0.10775, 0.062, 0.12]), render=False, max_steps=1000, normalize_rewards=True):
+        self.initial_position = initial_position
+
         super(OT2Env, self).__init__()
         self.render = render
         self.max_steps = max_steps
@@ -29,12 +31,21 @@ class OT2Env(gym.Env):
         self.cumulative_reward = 0.0
         self.goal_position = None
 
+    # In OT2Env class (reset method):
     def reset(self, seed=None):
         if seed is not None:
             np.random.seed(seed)
+
+        # Reset the simulation
         self.sim.reset(num_agents=1)
+        
+        # Set the robot's starting position using the correct method
+        self.sim.set_start_position(self.initial_position[0], self.initial_position[1], self.initial_position[2])  # Set start position
+
+        # Set the goal position randomly or from a predefined source
         self.goal_position = np.random.uniform(-0.3, 0.3, size=(3,)).astype(np.float32)
 
+        # Get the initial state
         state = self.sim.get_states()
         robot_id = list(state.keys())[0]
         pipette_position = np.array(state[robot_id].get('pipette_position', [0, 0, 0]), dtype=np.float32)

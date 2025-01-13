@@ -1,7 +1,7 @@
 import numpy as np
 import logging
 from pid_class import PIDController
-from task10_ot2_gym_wrapper import OT2Env
+from ot2_class import OT2Env
 
 # Set up logging
 log_file = "adaptive_pid_optimized_ot2.log"

@@ -1,0 +1,421 @@
+2025-01-12 16:42:07,171 - INFO - Processing image: test_image_1.png
+2025-01-12 16:42:15,259 - INFO - Extracted Root Tip Coordinates for test_image_1.png: [array([ 6.89359458, 43.06671185,  0.057     ]), array([23.2015114 , 54.59262704,  0.057     ]), array([28.18144573, 31.97573686,  0.057     ]), array([7.61201542e+01, 3.94784552e+01, 5.70000000e-02]), array([1.42501037e+02, 2.61040442e+01, 5.70000000e-02])]
+2025-01-12 16:42:15,259 - INFO - Processing image: test_image_10.png
+2025-01-12 16:42:17,795 - INFO - Extracted Root Tip Coordinates for test_image_10.png: [array([1.46895942e+01, 9.01801525e+01, 5.70000000e-02]), array([3.22199730e+01, 1.15797768e+02, 5.70000000e-02]), array([7.14622890e+01, 1.07097446e+02, 5.70000000e-02]), array([1.0775607e+02, 9.6732247e+01, 5.7000000e-02]), array([1.35579516e+02, 8.87838045e+01, 5.70000000e-02])]
+2025-01-12 16:42:17,800 - INFO - Processing image: test_image_11.png
+2025-01-12 16:42:19,871 - INFO - Extracted Root Tip Coordinates for test_image_11.png: [array([7.83030989e+00, 1.17194116e+02, 5.70000000e-02]), array([3.45374962e+01, 1.11286490e+02, 5.70000000e-02]), array([1.02056266e+02, 1.16012591e+02, 5.70000000e-02]), array([1.14927199e+02, 1.10427199e+02, 5.70000000e-02]), array([1.43618655e+02, 1.43885845e+02, 5.70000000e-02])]
+2025-01-12 16:42:19,872 - INFO - Processing image: test_image_12.png
+2025-01-12 16:42:21,921 - INFO - Extracted Root Tip Coordinates for test_image_12.png: [array([2.39640759e+01, 7.67274728e+01, 5.70000000e-02]), array([4.51399158e+01, 8.03807679e+01, 5.70000000e-02]), array([7.40355556e+01, 7.16236046e+01, 5.70000000e-02]), array([9.35494941e+01, 7.35577020e+01, 5.70000000e-02]), array([1.24857571e+02, 7.45784756e+01, 5.70000000e-02])]
+2025-01-12 16:42:21,922 - INFO - Processing image: test_image_13.png
+2025-01-12 16:42:23,986 - INFO - Extracted Root Tip Coordinates for test_image_13.png: [array([1.87639330e+01, 1.00115706e+02, 5.70000000e-02]), array([4.92142546e+01, 8.86763931e+01, 5.70000000e-02]), array([7.02292654e+01, 8.38965865e+01, 5.70000000e-02]), array([1.04539487e+02, 9.58729560e+01, 5.70000000e-02]), array([1.23785377e+02, 1.04251044e+02, 5.70000000e-02])]
+2025-01-12 16:42:23,987 - INFO - Processing image: test_image_14.png
+2025-01-12 16:42:26,014 - INFO - Extracted Root Tip Coordinates for test_image_14.png: [array([6.48958768e+00, 7.53573813e+01, 5.70000000e-02]), array([7.24039212e+00, 9.00727411e+01, 5.70000000e-02]), array([1.67863342e+01, 7.02553405e+01, 5.70000000e-02]), array([1.31605784e+02, 1.40254801e+01, 5.70000000e-02]), array([1.32624732e+02, 9.72902470e+00, 5.70000000e-02])]
+2025-01-12 16:42:26,014 - INFO - Processing image: test_image_15.png
+2025-01-12 16:42:28,198 - INFO - Extracted Root Tip Coordinates for test_image_15.png: [array([7.93756766e+00, 1.23477682e+02, 5.70000000e-02]), array([8.95651654e+00, 6.37032460e+01, 5.70000000e-02]), array([4.29080327e+00, 7.67000236e+01, 5.70000000e-02]), array([2.00576964e+01, 9.41006681e+01, 5.70000000e-02]), array([1.47479934e+02, 1.32607650e+02, 5.70000000e-02])]
+2025-01-12 16:42:28,198 - INFO - Processing image: test_image_16.png
+2025-01-12 16:42:30,297 - INFO - Extracted Root Tip Coordinates for test_image_16.png: [array([1.39926678e+01, 1.34165115e+02, 5.70000000e-02]), array([22.30217459, 46.78595274,  0.057     ]), array([1.03735341e+02, 4.94712374e+01, 5.70000000e-02]), array([1.32362932e+02, 4.70544812e+01, 5.70000000e-02]), array([1.43889022e+02, 1.27774137e+02, 5.70000000e-02])]
+2025-01-12 16:42:30,301 - INFO - Processing image: test_image_17.png
+2025-01-12 16:42:32,388 - INFO - Extracted Root Tip Coordinates for test_image_17.png: [array([1.60298372e+01, 5.94817708e+01, 5.70000000e-02]), array([4.54615742e+01, 6.24903668e+01, 5.70000000e-02]), array([7.37138972e+01, 6.63585616e+01, 5.70000000e-02]), array([1.04914755e+02, 6.46930888e+01, 5.70000000e-02]), array([1.24428694e+02, 6.21680172e+01, 5.70000000e-02])]
+2025-01-12 16:42:32,388 - INFO - Processing image: test_image_18.png
+2025-01-12 16:42:34,399 - INFO - Extracted Root Tip Coordinates for test_image_18.png: [array([1.41048898e+01, 1.15582945e+02, 5.70000000e-02]), array([1.66790764e+01, 5.83863824e+01, 5.70000000e-02]), array([5.05725337e+01, 8.32521182e+01, 5.70000000e-02]), array([1.06882866e+02, 9.66248357e+01, 5.70000000e-02]), array([1.34394486e+02, 9.67322470e+01, 5.70000000e-02])]
+2025-01-12 16:42:34,399 - INFO - Processing image: test_image_2.png
+2025-01-12 16:42:36,362 - INFO - Extracted Root Tip Coordinates for test_image_2.png: [array([6.47567453e+00, 8.24457000e+01, 5.70000000e-02]), array([48.92850472, 33.05875442,  0.057     ]), array([6.79778516e+01, 7.23843945e+01, 5.70000000e-02]), array([1.00742728e+02, 1.01865101e+02, 5.70000000e-02]), array([1.20064209e+02, 9.05055629e+01, 5.70000000e-02])]
+2025-01-12 16:42:36,362 - INFO - Processing image: test_image_3.png
+2025-01-12 16:42:38,280 - INFO - Extracted Root Tip Coordinates for test_image_3.png: [array([20.83323305, 36.21835179,  0.057     ]), array([7.60100468e+01, 3.14952248e+01, 5.70000000e-02]), array([1.03352373e+02, 3.37753550e+01, 5.70000000e-02]), array([1.31952446e+02, 3.19295353e+01, 5.70000000e-02]), array([1.37256857e+02, 2.18861042e+01, 5.70000000e-02])]
+2025-01-12 16:42:38,281 - INFO - Processing image: test_image_4.png
+2025-01-12 16:42:40,233 - INFO - Extracted Root Tip Coordinates for test_image_4.png: [array([22.04299918, 44.34204331,  0.057     ]), array([50.90804101, 43.42179791,  0.057     ]), array([7.64445998e+01, 3.93618917e+01, 5.70000000e-02]), array([9.97985467e+01, 4.30970054e+01, 5.70000000e-02]), array([1.31992072e+02, 3.41652118e+01, 5.70000000e-02])]
+2025-01-12 16:42:40,233 - INFO - Processing image: test_image_5.png
+2025-01-12 16:42:42,333 - INFO - Extracted Root Tip Coordinates for test_image_5.png: [array([21.76957874, 44.00139394,  0.057     ]), array([47.18685015, 40.97109091,  0.057     ]), array([7.45090562e+01, 3.19884069e+01, 5.70000000e-02]), array([1.01504702e+02, 3.95641645e+01, 5.70000000e-02]), array([1.33616458e+02, 3.87524762e+01, 5.70000000e-02])]
+2025-01-12 16:42:42,334 - INFO - Processing image: test_image_6.png
+2025-01-12 16:42:53,078 - ERROR - Error processing image test_image_6.png: Graph execution error:
+
+Detected at node 'model_1/conv2d_33/Relu' defined at (most recent call last):
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\runpy.py", line 196, in _run_module_as_main
+      return _run_code(code, main_globals, None,
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\runpy.py", line 86, in _run_code
+      exec(code, run_globals)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+      app.launch_new_instance()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+      app.start()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+      self.io_loop.start()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\tornado\platform\asyncio.py", line 205, in start
+      self.asyncio_loop.run_forever()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\asyncio\base_events.py", line 603, in run_forever
+      self._run_once()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\asyncio\base_events.py", line 1909, in _run_once
+      handle._run()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\asyncio\events.py", line 80, in _run
+      self._context.run(self._callback, *self._args)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelbase.py", line 545, in dispatch_queue
+      await self.process_one()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelbase.py", line 534, in process_one
+      await dispatch(*args)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelbase.py", line 437, in dispatch_shell
+      await result
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\ipkernel.py", line 362, in execute_request
+      await super().execute_request(stream, ident, parent)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelbase.py", line 778, in execute_request
+      reply_content = await reply_content
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\ipkernel.py", line 449, in do_execute
+      res = shell.run_cell(
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\zmqshell.py", line 549, in run_cell
+      return super().run_cell(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3075, in run_cell
+      result = self._run_cell(
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3130, in _run_cell
+      result = runner(coro)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+      coro.send(None)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3334, in run_cell_async
+      has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3517, in run_ast_nodes
+      if await self.run_code(code, result, async_=asy):
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3577, in run_code
+      exec(code_obj, self.user_global_ns, self.user_ns)
+    File "C:\Users\szala\AppData\Local\Temp\ipykernel_12520\2751493721.py", line 125, in <module>
+      predicted_mask = predict_root_mask(petri_dish, model)
+    File "C:\Users\szala\AppData\Local\Temp\ipykernel_12520\2751493721.py", line 47, in predict_root_mask
+      predictions = model.predict(patches, verbose=0)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 2253, in predict
+      tmp_batch_outputs = self.predict_function(iterator)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 2041, in predict_function
+      return step_function(self, iterator)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 2027, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 2015, in run_step
+      outputs = model.predict_step(data)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 1983, in predict_step
+      return self(x, training=False)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 557, in __call__
+      return super().__call__(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\base_layer.py", line 1097, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\functional.py", line 510, in call
+      return self._run_internal_graph(inputs, training=training, mask=mask)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\functional.py", line 667, in _run_internal_graph
+      outputs = node.layer(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\base_layer.py", line 1097, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\layers\convolutional\base_conv.py", line 314, in call
+      return self.activation(outputs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\activations.py", line 317, in relu
+      return backend.relu(
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\backend.py", line 5366, in relu
+      x = tf.nn.relu(x)
+Node: 'model_1/conv2d_33/Relu'
+OOM when allocating tensor with shape[32,32,64,64] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node model_1/conv2d_33/Relu}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_predict_function_2657]
+2025-01-12 16:42:53,100 - INFO - Processing image: test_image_7.png
+2025-01-12 16:43:03,599 - ERROR - Error processing image test_image_7.png: Failed copying input tensor from /job:localhost/replica:0/task:0/device:CPU:0 to /job:localhost/replica:0/task:0/device:GPU:0 in order to run _EagerConst: Dst tensor is not initialized.
+2025-01-12 16:43:03,614 - INFO - Processing image: test_image_8.png
+2025-01-12 16:43:14,066 - ERROR - Error processing image test_image_8.png: Failed copying input tensor from /job:localhost/replica:0/task:0/device:CPU:0 to /job:localhost/replica:0/task:0/device:GPU:0 in order to run _EagerConst: Dst tensor is not initialized.
+2025-01-12 16:43:14,082 - INFO - Processing image: test_image_9.png
+2025-01-12 16:43:24,565 - ERROR - Error processing image test_image_9.png: Failed copying input tensor from /job:localhost/replica:0/task:0/device:CPU:0 to /job:localhost/replica:0/task:0/device:GPU:0 in order to run _EagerConst: Dst tensor is not initialized.
+2025-01-12 16:43:24,581 - INFO - All Extracted Root Tip Coordinates:
+2025-01-12 16:43:24,581 - INFO - test_image_1.png: [array([ 6.89359458, 43.06671185,  0.057     ]), array([23.2015114 , 54.59262704,  0.057     ]), array([28.18144573, 31.97573686,  0.057     ]), array([7.61201542e+01, 3.94784552e+01, 5.70000000e-02]), array([1.42501037e+02, 2.61040442e+01, 5.70000000e-02])]
+2025-01-12 16:43:24,581 - INFO - test_image_10.png: [array([1.46895942e+01, 9.01801525e+01, 5.70000000e-02]), array([3.22199730e+01, 1.15797768e+02, 5.70000000e-02]), array([7.14622890e+01, 1.07097446e+02, 5.70000000e-02]), array([1.0775607e+02, 9.6732247e+01, 5.7000000e-02]), array([1.35579516e+02, 8.87838045e+01, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_11.png: [array([7.83030989e+00, 1.17194116e+02, 5.70000000e-02]), array([3.45374962e+01, 1.11286490e+02, 5.70000000e-02]), array([1.02056266e+02, 1.16012591e+02, 5.70000000e-02]), array([1.14927199e+02, 1.10427199e+02, 5.70000000e-02]), array([1.43618655e+02, 1.43885845e+02, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_12.png: [array([2.39640759e+01, 7.67274728e+01, 5.70000000e-02]), array([4.51399158e+01, 8.03807679e+01, 5.70000000e-02]), array([7.40355556e+01, 7.16236046e+01, 5.70000000e-02]), array([9.35494941e+01, 7.35577020e+01, 5.70000000e-02]), array([1.24857571e+02, 7.45784756e+01, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_13.png: [array([1.87639330e+01, 1.00115706e+02, 5.70000000e-02]), array([4.92142546e+01, 8.86763931e+01, 5.70000000e-02]), array([7.02292654e+01, 8.38965865e+01, 5.70000000e-02]), array([1.04539487e+02, 9.58729560e+01, 5.70000000e-02]), array([1.23785377e+02, 1.04251044e+02, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_14.png: [array([6.48958768e+00, 7.53573813e+01, 5.70000000e-02]), array([7.24039212e+00, 9.00727411e+01, 5.70000000e-02]), array([1.67863342e+01, 7.02553405e+01, 5.70000000e-02]), array([1.31605784e+02, 1.40254801e+01, 5.70000000e-02]), array([1.32624732e+02, 9.72902470e+00, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_15.png: [array([7.93756766e+00, 1.23477682e+02, 5.70000000e-02]), array([8.95651654e+00, 6.37032460e+01, 5.70000000e-02]), array([4.29080327e+00, 7.67000236e+01, 5.70000000e-02]), array([2.00576964e+01, 9.41006681e+01, 5.70000000e-02]), array([1.47479934e+02, 1.32607650e+02, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_16.png: [array([1.39926678e+01, 1.34165115e+02, 5.70000000e-02]), array([22.30217459, 46.78595274,  0.057     ]), array([1.03735341e+02, 4.94712374e+01, 5.70000000e-02]), array([1.32362932e+02, 4.70544812e+01, 5.70000000e-02]), array([1.43889022e+02, 1.27774137e+02, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_17.png: [array([1.60298372e+01, 5.94817708e+01, 5.70000000e-02]), array([4.54615742e+01, 6.24903668e+01, 5.70000000e-02]), array([7.37138972e+01, 6.63585616e+01, 5.70000000e-02]), array([1.04914755e+02, 6.46930888e+01, 5.70000000e-02]), array([1.24428694e+02, 6.21680172e+01, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_18.png: [array([1.41048898e+01, 1.15582945e+02, 5.70000000e-02]), array([1.66790764e+01, 5.83863824e+01, 5.70000000e-02]), array([5.05725337e+01, 8.32521182e+01, 5.70000000e-02]), array([1.06882866e+02, 9.66248357e+01, 5.70000000e-02]), array([1.34394486e+02, 9.67322470e+01, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_2.png: [array([6.47567453e+00, 8.24457000e+01, 5.70000000e-02]), array([48.92850472, 33.05875442,  0.057     ]), array([6.79778516e+01, 7.23843945e+01, 5.70000000e-02]), array([1.00742728e+02, 1.01865101e+02, 5.70000000e-02]), array([1.20064209e+02, 9.05055629e+01, 5.70000000e-02])]
+2025-01-12 16:43:24,596 - INFO - test_image_3.png: [array([20.83323305, 36.21835179,  0.057     ]), array([7.60100468e+01, 3.14952248e+01, 5.70000000e-02]), array([1.03352373e+02, 3.37753550e+01, 5.70000000e-02]), array([1.31952446e+02, 3.19295353e+01, 5.70000000e-02]), array([1.37256857e+02, 2.18861042e+01, 5.70000000e-02])]
+2025-01-12 16:43:24,607 - INFO - test_image_4.png: [array([22.04299918, 44.34204331,  0.057     ]), array([50.90804101, 43.42179791,  0.057     ]), array([7.64445998e+01, 3.93618917e+01, 5.70000000e-02]), array([9.97985467e+01, 4.30970054e+01, 5.70000000e-02]), array([1.31992072e+02, 3.41652118e+01, 5.70000000e-02])]
+2025-01-12 16:43:24,607 - INFO - test_image_5.png: [array([21.76957874, 44.00139394,  0.057     ]), array([47.18685015, 40.97109091,  0.057     ]), array([7.45090562e+01, 3.19884069e+01, 5.70000000e-02]), array([1.01504702e+02, 3.95641645e+01, 5.70000000e-02]), array([1.33616458e+02, 3.87524762e+01, 5.70000000e-02])]
+2025-01-12 16:44:31,561 - ERROR - Error enabling memory growth for GPU: Physical devices cannot be modified after being initialized
+2025-01-12 16:44:32,256 - INFO - Processing image: test_image_1.png
+2025-01-12 16:44:34,733 - INFO - Extracted Root Tip Coordinates for test_image_1.png: [array([ 6.89359458, 43.06671185,  0.057     ]), array([23.2015114 , 54.59262704,  0.057     ]), array([28.18144573, 31.97573686,  0.057     ]), array([7.61201542e+01, 3.94784552e+01, 5.70000000e-02]), array([1.42501037e+02, 2.61040442e+01, 5.70000000e-02])]
+2025-01-12 16:44:34,734 - INFO - Processing image: test_image_10.png
+2025-01-12 16:44:36,802 - INFO - Extracted Root Tip Coordinates for test_image_10.png: [array([1.46895942e+01, 9.01801525e+01, 5.70000000e-02]), array([3.22199730e+01, 1.15797768e+02, 5.70000000e-02]), array([7.14622890e+01, 1.07097446e+02, 5.70000000e-02]), array([1.0775607e+02, 9.6732247e+01, 5.7000000e-02]), array([1.35579516e+02, 8.87838045e+01, 5.70000000e-02])]
+2025-01-12 16:44:36,802 - INFO - Processing image: test_image_11.png
+2025-01-12 16:44:38,810 - INFO - Extracted Root Tip Coordinates for test_image_11.png: [array([7.83030989e+00, 1.17194116e+02, 5.70000000e-02]), array([3.45374962e+01, 1.11286490e+02, 5.70000000e-02]), array([1.02056266e+02, 1.16012591e+02, 5.70000000e-02]), array([1.14927199e+02, 1.10427199e+02, 5.70000000e-02]), array([1.43618655e+02, 1.43885845e+02, 5.70000000e-02])]
+2025-01-12 16:44:38,819 - INFO - Processing image: test_image_12.png
+2025-01-12 16:44:40,826 - INFO - Extracted Root Tip Coordinates for test_image_12.png: [array([2.39640759e+01, 7.67274728e+01, 5.70000000e-02]), array([4.51399158e+01, 8.03807679e+01, 5.70000000e-02]), array([7.40355556e+01, 7.16236046e+01, 5.70000000e-02]), array([9.35494941e+01, 7.35577020e+01, 5.70000000e-02]), array([1.24857571e+02, 7.45784756e+01, 5.70000000e-02])]
+2025-01-12 16:44:40,826 - INFO - Processing image: test_image_13.png
+2025-01-12 16:44:42,922 - INFO - Extracted Root Tip Coordinates for test_image_13.png: [array([1.87639330e+01, 1.00115706e+02, 5.70000000e-02]), array([4.92142546e+01, 8.86763931e+01, 5.70000000e-02]), array([7.02292654e+01, 8.38965865e+01, 5.70000000e-02]), array([1.04539487e+02, 9.58729560e+01, 5.70000000e-02]), array([1.23785377e+02, 1.04251044e+02, 5.70000000e-02])]
+2025-01-12 16:44:42,923 - INFO - Processing image: test_image_14.png
+2025-01-12 16:44:44,971 - INFO - Extracted Root Tip Coordinates for test_image_14.png: [array([6.48958768e+00, 7.53573813e+01, 5.70000000e-02]), array([7.24039212e+00, 9.00727411e+01, 5.70000000e-02]), array([1.67863342e+01, 7.02553405e+01, 5.70000000e-02]), array([1.31605784e+02, 1.40254801e+01, 5.70000000e-02]), array([1.32624732e+02, 9.72902470e+00, 5.70000000e-02])]
+2025-01-12 16:44:44,972 - INFO - Processing image: test_image_15.png
+2025-01-12 16:44:46,990 - INFO - Extracted Root Tip Coordinates for test_image_15.png: [array([7.93756766e+00, 1.23477682e+02, 5.70000000e-02]), array([8.95651654e+00, 6.37032460e+01, 5.70000000e-02]), array([4.29080327e+00, 7.67000236e+01, 5.70000000e-02]), array([2.00576964e+01, 9.41006681e+01, 5.70000000e-02]), array([1.47479934e+02, 1.32607650e+02, 5.70000000e-02])]
+2025-01-12 16:44:46,990 - INFO - Processing image: test_image_16.png
+2025-01-12 16:44:48,998 - INFO - Extracted Root Tip Coordinates for test_image_16.png: [array([1.39926678e+01, 1.34165115e+02, 5.70000000e-02]), array([22.30217459, 46.78595274,  0.057     ]), array([1.03735341e+02, 4.94712374e+01, 5.70000000e-02]), array([1.32362932e+02, 4.70544812e+01, 5.70000000e-02]), array([1.43889022e+02, 1.27774137e+02, 5.70000000e-02])]
+2025-01-12 16:44:48,998 - INFO - Processing image: test_image_17.png
+2025-01-12 16:44:50,987 - INFO - Extracted Root Tip Coordinates for test_image_17.png: [array([1.60298372e+01, 5.94817708e+01, 5.70000000e-02]), array([4.54615742e+01, 6.24903668e+01, 5.70000000e-02]), array([7.37138972e+01, 6.63585616e+01, 5.70000000e-02]), array([1.04914755e+02, 6.46930888e+01, 5.70000000e-02]), array([1.24428694e+02, 6.21680172e+01, 5.70000000e-02])]
+2025-01-12 16:44:50,988 - INFO - Processing image: test_image_18.png
+2025-01-12 16:44:52,983 - INFO - Extracted Root Tip Coordinates for test_image_18.png: [array([1.41048898e+01, 1.15582945e+02, 5.70000000e-02]), array([1.66790764e+01, 5.83863824e+01, 5.70000000e-02]), array([5.05725337e+01, 8.32521182e+01, 5.70000000e-02]), array([1.06882866e+02, 9.66248357e+01, 5.70000000e-02]), array([1.34394486e+02, 9.67322470e+01, 5.70000000e-02])]
+2025-01-12 16:44:52,983 - INFO - Processing image: test_image_2.png
+2025-01-12 16:44:54,931 - INFO - Extracted Root Tip Coordinates for test_image_2.png: [array([6.47567453e+00, 8.24457000e+01, 5.70000000e-02]), array([48.92850472, 33.05875442,  0.057     ]), array([6.79778516e+01, 7.23843945e+01, 5.70000000e-02]), array([1.00742728e+02, 1.01865101e+02, 5.70000000e-02]), array([1.20064209e+02, 9.05055629e+01, 5.70000000e-02])]
+2025-01-12 16:44:54,932 - INFO - Processing image: test_image_3.png
+2025-01-12 16:44:56,816 - INFO - Extracted Root Tip Coordinates for test_image_3.png: [array([20.83323305, 36.21835179,  0.057     ]), array([7.60100468e+01, 3.14952248e+01, 5.70000000e-02]), array([1.03352373e+02, 3.37753550e+01, 5.70000000e-02]), array([1.31952446e+02, 3.19295353e+01, 5.70000000e-02]), array([1.37256857e+02, 2.18861042e+01, 5.70000000e-02])]
+2025-01-12 16:44:56,817 - INFO - Processing image: test_image_4.png
+2025-01-12 16:44:58,722 - INFO - Extracted Root Tip Coordinates for test_image_4.png: [array([22.04299918, 44.34204331,  0.057     ]), array([50.90804101, 43.42179791,  0.057     ]), array([7.64445998e+01, 3.93618917e+01, 5.70000000e-02]), array([9.97985467e+01, 4.30970054e+01, 5.70000000e-02]), array([1.31992072e+02, 3.41652118e+01, 5.70000000e-02])]
+2025-01-12 16:44:58,723 - INFO - Processing image: test_image_5.png
+2025-01-12 16:45:09,404 - ERROR - Error processing image test_image_5.png: Graph execution error:
+
+Detected at node 'model_1/conv2d_33/Relu' defined at (most recent call last):
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\runpy.py", line 196, in _run_module_as_main
+      return _run_code(code, main_globals, None,
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\runpy.py", line 86, in _run_code
+      exec(code, run_globals)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+      app.launch_new_instance()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+      app.start()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+      self.io_loop.start()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\tornado\platform\asyncio.py", line 205, in start
+      self.asyncio_loop.run_forever()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\asyncio\base_events.py", line 603, in run_forever
+      self._run_once()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\asyncio\base_events.py", line 1909, in _run_once
+      handle._run()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\asyncio\events.py", line 80, in _run
+      self._context.run(self._callback, *self._args)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelbase.py", line 545, in dispatch_queue
+      await self.process_one()
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelbase.py", line 534, in process_one
+      await dispatch(*args)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelbase.py", line 437, in dispatch_shell
+      await result
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\ipkernel.py", line 362, in execute_request
+      await super().execute_request(stream, ident, parent)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\kernelbase.py", line 778, in execute_request
+      reply_content = await reply_content
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\ipkernel.py", line 449, in do_execute
+      res = shell.run_cell(
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\ipykernel\zmqshell.py", line 549, in run_cell
+      return super().run_cell(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3075, in run_cell
+      result = self._run_cell(
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3130, in _run_cell
+      result = runner(coro)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+      coro.send(None)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3334, in run_cell_async
+      has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3517, in run_ast_nodes
+      if await self.run_code(code, result, async_=asy):
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\IPython\core\interactiveshell.py", line 3577, in run_code
+      exec(code_obj, self.user_global_ns, self.user_ns)
+    File "C:\Users\szala\AppData\Local\Temp\ipykernel_12520\618451998.py", line 135, in <module>
+      predicted_mask = predict_root_mask(petri_dish, model)
+    File "C:\Users\szala\AppData\Local\Temp\ipykernel_12520\618451998.py", line 47, in predict_root_mask
+      predictions = model.predict(patches, verbose=0)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 2253, in predict
+      tmp_batch_outputs = self.predict_function(iterator)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 2041, in predict_function
+      return step_function(self, iterator)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 2027, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 2015, in run_step
+      outputs = model.predict_step(data)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 1983, in predict_step
+      return self(x, training=False)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\training.py", line 557, in __call__
+      return super().__call__(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\base_layer.py", line 1097, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\functional.py", line 510, in call
+      return self._run_internal_graph(inputs, training=training, mask=mask)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\functional.py", line 667, in _run_internal_graph
+      outputs = node.layer(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\engine\base_layer.py", line 1097, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\layers\convolutional\base_conv.py", line 314, in call
+      return self.activation(outputs)
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\activations.py", line 317, in relu
+      return backend.relu(
+    File "c:\Users\szala\anaconda3\envs\tf2.10-gpu\lib\site-packages\keras\backend.py", line 5366, in relu
+      x = tf.nn.relu(x)
+Node: 'model_1/conv2d_33/Relu'
+OOM when allocating tensor with shape[32,32,64,64] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node model_1/conv2d_33/Relu}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_predict_function_11751]
+2025-01-12 16:45:09,431 - INFO - Processing image: test_image_6.png
+2025-01-12 16:45:19,923 - ERROR - Error processing image test_image_6.png: Failed copying input tensor from /job:localhost/replica:0/task:0/device:CPU:0 to /job:localhost/replica:0/task:0/device:GPU:0 in order to run _EagerConst: Dst tensor is not initialized.
+2025-01-12 16:45:19,938 - INFO - Processing image: test_image_7.png
+2025-01-12 16:45:30,432 - ERROR - Error processing image test_image_7.png: Failed copying input tensor from /job:localhost/replica:0/task:0/device:CPU:0 to /job:localhost/replica:0/task:0/device:GPU:0 in order to run _EagerConst: Dst tensor is not initialized.
+2025-01-12 16:45:30,456 - INFO - Processing image: test_image_8.png
+2025-01-12 16:45:41,032 - ERROR - Error processing image test_image_8.png: Failed copying input tensor from /job:localhost/replica:0/task:0/device:CPU:0 to /job:localhost/replica:0/task:0/device:GPU:0 in order to run _EagerConst: Dst tensor is not initialized.
+2025-01-12 16:45:41,054 - INFO - Processing image: test_image_9.png
+2025-01-12 16:45:51,595 - ERROR - Error processing image test_image_9.png: Failed copying input tensor from /job:localhost/replica:0/task:0/device:CPU:0 to /job:localhost/replica:0/task:0/device:GPU:0 in order to run _EagerConst: Dst tensor is not initialized.
+2025-01-12 16:45:51,611 - INFO - All Extracted Root Tip Coordinates:
+2025-01-12 16:45:51,614 - INFO - test_image_1.png: [array([ 6.89359458, 43.06671185,  0.057     ]), array([23.2015114 , 54.59262704,  0.057     ]), array([28.18144573, 31.97573686,  0.057     ]), array([7.61201542e+01, 3.94784552e+01, 5.70000000e-02]), array([1.42501037e+02, 2.61040442e+01, 5.70000000e-02])]
+2025-01-12 16:45:51,614 - INFO - test_image_10.png: [array([1.46895942e+01, 9.01801525e+01, 5.70000000e-02]), array([3.22199730e+01, 1.15797768e+02, 5.70000000e-02]), array([7.14622890e+01, 1.07097446e+02, 5.70000000e-02]), array([1.0775607e+02, 9.6732247e+01, 5.7000000e-02]), array([1.35579516e+02, 8.87838045e+01, 5.70000000e-02])]
+2025-01-12 16:45:51,616 - INFO - test_image_11.png: [array([7.83030989e+00, 1.17194116e+02, 5.70000000e-02]), array([3.45374962e+01, 1.11286490e+02, 5.70000000e-02]), array([1.02056266e+02, 1.16012591e+02, 5.70000000e-02]), array([1.14927199e+02, 1.10427199e+02, 5.70000000e-02]), array([1.43618655e+02, 1.43885845e+02, 5.70000000e-02])]
+2025-01-12 16:45:51,618 - INFO - test_image_12.png: [array([2.39640759e+01, 7.67274728e+01, 5.70000000e-02]), array([4.51399158e+01, 8.03807679e+01, 5.70000000e-02]), array([7.40355556e+01, 7.16236046e+01, 5.70000000e-02]), array([9.35494941e+01, 7.35577020e+01, 5.70000000e-02]), array([1.24857571e+02, 7.45784756e+01, 5.70000000e-02])]
+2025-01-12 16:45:51,618 - INFO - test_image_13.png: [array([1.87639330e+01, 1.00115706e+02, 5.70000000e-02]), array([4.92142546e+01, 8.86763931e+01, 5.70000000e-02]), array([7.02292654e+01, 8.38965865e+01, 5.70000000e-02]), array([1.04539487e+02, 9.58729560e+01, 5.70000000e-02]), array([1.23785377e+02, 1.04251044e+02, 5.70000000e-02])]
+2025-01-12 16:45:51,620 - INFO - test_image_14.png: [array([6.48958768e+00, 7.53573813e+01, 5.70000000e-02]), array([7.24039212e+00, 9.00727411e+01, 5.70000000e-02]), array([1.67863342e+01, 7.02553405e+01, 5.70000000e-02]), array([1.31605784e+02, 1.40254801e+01, 5.70000000e-02]), array([1.32624732e+02, 9.72902470e+00, 5.70000000e-02])]
+2025-01-12 16:45:51,620 - INFO - test_image_15.png: [array([7.93756766e+00, 1.23477682e+02, 5.70000000e-02]), array([8.95651654e+00, 6.37032460e+01, 5.70000000e-02]), array([4.29080327e+00, 7.67000236e+01, 5.70000000e-02]), array([2.00576964e+01, 9.41006681e+01, 5.70000000e-02]), array([1.47479934e+02, 1.32607650e+02, 5.70000000e-02])]
+2025-01-12 16:45:51,761 - INFO - test_image_16.png: [array([1.39926678e+01, 1.34165115e+02, 5.70000000e-02]), array([22.30217459, 46.78595274,  0.057     ]), array([1.03735341e+02, 4.94712374e+01, 5.70000000e-02]), array([1.32362932e+02, 4.70544812e+01, 5.70000000e-02]), array([1.43889022e+02, 1.27774137e+02, 5.70000000e-02])]
+2025-01-12 16:45:51,761 - INFO - test_image_17.png: [array([1.60298372e+01, 5.94817708e+01, 5.70000000e-02]), array([4.54615742e+01, 6.24903668e+01, 5.70000000e-02]), array([7.37138972e+01, 6.63585616e+01, 5.70000000e-02]), array([1.04914755e+02, 6.46930888e+01, 5.70000000e-02]), array([1.24428694e+02, 6.21680172e+01, 5.70000000e-02])]
+2025-01-12 16:45:51,761 - INFO - test_image_18.png: [array([1.41048898e+01, 1.15582945e+02, 5.70000000e-02]), array([1.66790764e+01, 5.83863824e+01, 5.70000000e-02]), array([5.05725337e+01, 8.32521182e+01, 5.70000000e-02]), array([1.06882866e+02, 9.66248357e+01, 5.70000000e-02]), array([1.34394486e+02, 9.67322470e+01, 5.70000000e-02])]
+2025-01-12 16:45:51,767 - INFO - test_image_2.png: [array([6.47567453e+00, 8.24457000e+01, 5.70000000e-02]), array([48.92850472, 33.05875442,  0.057     ]), array([6.79778516e+01, 7.23843945e+01, 5.70000000e-02]), array([1.00742728e+02, 1.01865101e+02, 5.70000000e-02]), array([1.20064209e+02, 9.05055629e+01, 5.70000000e-02])]
+2025-01-12 16:45:51,767 - INFO - test_image_3.png: [array([20.83323305, 36.21835179,  0.057     ]), array([7.60100468e+01, 3.14952248e+01, 5.70000000e-02]), array([1.03352373e+02, 3.37753550e+01, 5.70000000e-02]), array([1.31952446e+02, 3.19295353e+01, 5.70000000e-02]), array([1.37256857e+02, 2.18861042e+01, 5.70000000e-02])]
+2025-01-12 16:45:51,770 - INFO - test_image_4.png: [array([22.04299918, 44.34204331,  0.057     ]), array([50.90804101, 43.42179791,  0.057     ]), array([7.64445998e+01, 3.93618917e+01, 5.70000000e-02]), array([9.97985467e+01, 4.30970054e+01, 5.70000000e-02]), array([1.31992072e+02, 3.41652118e+01, 5.70000000e-02])]
+2025-01-12 16:53:30,998 - INFO - Enabled memory growth for GPU.
+2025-01-12 16:53:31,966 - INFO - Processing image: test_image_1.png
+2025-01-12 16:53:41,962 - INFO - Extracted Root Tip Coordinates for test_image_1.png: [array([ 6.89359458, 43.06671185,  0.057     ]), array([23.2015114 , 54.59262704,  0.057     ]), array([28.18144573, 31.97573686,  0.057     ]), array([7.61201542e+01, 3.94784552e+01, 5.70000000e-02]), array([1.42501037e+02, 2.61040442e+01, 5.70000000e-02])]
+2025-01-12 16:53:41,962 - INFO - Processing image: test_image_10.png
+2025-01-12 16:53:49,162 - INFO - Extracted Root Tip Coordinates for test_image_10.png: [array([1.46895942e+01, 9.01801525e+01, 5.70000000e-02]), array([3.22199730e+01, 1.15797768e+02, 5.70000000e-02]), array([7.14622890e+01, 1.07097446e+02, 5.70000000e-02]), array([1.0775607e+02, 9.6732247e+01, 5.7000000e-02]), array([1.35579516e+02, 8.87838045e+01, 5.70000000e-02])]
+2025-01-12 16:53:49,162 - INFO - Processing image: test_image_11.png
+2025-01-12 16:53:55,799 - INFO - Extracted Root Tip Coordinates for test_image_11.png: [array([7.83030989e+00, 1.17194116e+02, 5.70000000e-02]), array([3.45374962e+01, 1.11286490e+02, 5.70000000e-02]), array([1.02056266e+02, 1.16012591e+02, 5.70000000e-02]), array([1.14927199e+02, 1.10427199e+02, 5.70000000e-02]), array([1.43618655e+02, 1.43885845e+02, 5.70000000e-02])]
+2025-01-12 16:53:55,800 - INFO - Processing image: test_image_12.png
+2025-01-12 16:54:03,318 - INFO - Extracted Root Tip Coordinates for test_image_12.png: [array([2.39640759e+01, 7.67274728e+01, 5.70000000e-02]), array([4.51399158e+01, 8.03807679e+01, 5.70000000e-02]), array([7.40355556e+01, 7.16236046e+01, 5.70000000e-02]), array([9.35494941e+01, 7.35577020e+01, 5.70000000e-02]), array([1.24857571e+02, 7.45784756e+01, 5.70000000e-02])]
+2025-01-12 16:54:03,319 - INFO - Processing image: test_image_13.png
+2025-01-12 16:54:10,812 - INFO - Extracted Root Tip Coordinates for test_image_13.png: [array([1.87639330e+01, 1.00115706e+02, 5.70000000e-02]), array([4.92142546e+01, 8.86763931e+01, 5.70000000e-02]), array([7.02292654e+01, 8.38965865e+01, 5.70000000e-02]), array([1.04539487e+02, 9.58729560e+01, 5.70000000e-02]), array([1.23785377e+02, 1.04251044e+02, 5.70000000e-02])]
+2025-01-12 16:54:10,813 - INFO - Processing image: test_image_14.png
+2025-01-12 16:54:18,167 - INFO - Extracted Root Tip Coordinates for test_image_14.png: [array([6.48958768e+00, 7.53573813e+01, 5.70000000e-02]), array([7.24039212e+00, 9.00727411e+01, 5.70000000e-02]), array([1.67863342e+01, 7.02553405e+01, 5.70000000e-02]), array([1.31605784e+02, 1.40254801e+01, 5.70000000e-02]), array([1.32624732e+02, 9.72902470e+00, 5.70000000e-02])]
+2025-01-12 16:54:18,167 - INFO - Processing image: test_image_15.png
+2025-01-12 16:54:25,556 - INFO - Extracted Root Tip Coordinates for test_image_15.png: [array([7.93756766e+00, 1.23477682e+02, 5.70000000e-02]), array([8.95651654e+00, 6.37032460e+01, 5.70000000e-02]), array([4.29080327e+00, 7.67000236e+01, 5.70000000e-02]), array([2.00576964e+01, 9.41006681e+01, 5.70000000e-02]), array([1.47479934e+02, 1.32607650e+02, 5.70000000e-02])]
+2025-01-12 16:54:25,557 - INFO - Processing image: test_image_16.png
+2025-01-12 16:54:33,380 - INFO - Extracted Root Tip Coordinates for test_image_16.png: [array([1.39926678e+01, 1.34165115e+02, 5.70000000e-02]), array([22.30217459, 46.78595274,  0.057     ]), array([1.03735341e+02, 4.94712374e+01, 5.70000000e-02]), array([1.32362932e+02, 4.70544812e+01, 5.70000000e-02]), array([1.43889022e+02, 1.27774137e+02, 5.70000000e-02])]
+2025-01-12 16:54:33,381 - INFO - Processing image: test_image_17.png
+2025-01-12 16:54:41,284 - INFO - Extracted Root Tip Coordinates for test_image_17.png: [array([1.60298372e+01, 5.94817708e+01, 5.70000000e-02]), array([4.54615742e+01, 6.24903668e+01, 5.70000000e-02]), array([7.37138972e+01, 6.63585616e+01, 5.70000000e-02]), array([1.04914755e+02, 6.46930888e+01, 5.70000000e-02]), array([1.24428694e+02, 6.21680172e+01, 5.70000000e-02])]
+2025-01-12 16:54:41,284 - INFO - Processing image: test_image_18.png
+2025-01-12 16:54:49,334 - INFO - Extracted Root Tip Coordinates for test_image_18.png: [array([1.41048898e+01, 1.15582945e+02, 5.70000000e-02]), array([1.66790764e+01, 5.83863824e+01, 5.70000000e-02]), array([5.05725337e+01, 8.32521182e+01, 5.70000000e-02]), array([1.06882866e+02, 9.66248357e+01, 5.70000000e-02]), array([1.34394486e+02, 9.67322470e+01, 5.70000000e-02])]
+2025-01-12 16:54:49,335 - INFO - Processing image: test_image_2.png
+2025-01-12 16:54:57,160 - INFO - Extracted Root Tip Coordinates for test_image_2.png: [array([6.47567453e+00, 8.24457000e+01, 5.70000000e-02]), array([48.92850472, 33.05875442,  0.057     ]), array([6.79778516e+01, 7.23843945e+01, 5.70000000e-02]), array([1.00742728e+02, 1.01865101e+02, 5.70000000e-02]), array([1.20064209e+02, 9.05055629e+01, 5.70000000e-02])]
+2025-01-12 16:54:57,161 - INFO - Processing image: test_image_3.png
+2025-01-12 16:55:04,334 - INFO - Extracted Root Tip Coordinates for test_image_3.png: [array([20.83323305, 36.21835179,  0.057     ]), array([7.60100468e+01, 3.14952248e+01, 5.70000000e-02]), array([1.03352373e+02, 3.37753550e+01, 5.70000000e-02]), array([1.31952446e+02, 3.19295353e+01, 5.70000000e-02]), array([1.37256857e+02, 2.18861042e+01, 5.70000000e-02])]
+2025-01-12 16:55:04,335 - INFO - Processing image: test_image_4.png
+2025-01-12 16:55:11,618 - INFO - Extracted Root Tip Coordinates for test_image_4.png: [array([22.04299918, 44.34204331,  0.057     ]), array([50.90804101, 43.42179791,  0.057     ]), array([7.64445998e+01, 3.93618917e+01, 5.70000000e-02]), array([9.97985467e+01, 4.30970054e+01, 5.70000000e-02]), array([1.31992072e+02, 3.41652118e+01, 5.70000000e-02])]
+2025-01-12 16:55:11,618 - INFO - Processing image: test_image_5.png
+2025-01-12 16:55:19,310 - INFO - Extracted Root Tip Coordinates for test_image_5.png: [array([21.76957874, 44.00139394,  0.057     ]), array([47.18685015, 40.97109091,  0.057     ]), array([7.45090562e+01, 3.19884069e+01, 5.70000000e-02]), array([1.01504702e+02, 3.95641645e+01, 5.70000000e-02]), array([1.33616458e+02, 3.87524762e+01, 5.70000000e-02])]
+2025-01-12 16:55:19,310 - INFO - Processing image: test_image_6.png
+2025-01-12 16:55:27,486 - INFO - Extracted Root Tip Coordinates for test_image_6.png: [array([21.35729595, 44.65512839,  0.057     ]), array([43.47861814, 52.95530922,  0.057     ]), array([7.14844300e+01, 5.29010597e+01, 5.70000000e-02]), array([1.00307532e+02, 5.14905714e+01, 5.70000000e-02]), array([1.28694746e+02, 4.19969005e+01, 5.70000000e-02])]
+2025-01-12 16:55:27,486 - INFO - Processing image: test_image_7.png
+2025-01-12 16:55:35,262 - INFO - Extracted Root Tip Coordinates for test_image_7.png: [array([20.96831645, 50.11628882,  0.057     ]), array([47.22103976, 37.79272747,  0.057     ]), array([7.54345474e+01, 3.22552682e+01, 5.70000000e-02]), array([1.05173109e+02, 4.96276895e+01, 5.70000000e-02]), array([1.3175263e+02, 5.3916506e+01, 5.7000000e-02])]
+2025-01-12 16:55:35,262 - INFO - Processing image: test_image_8.png
+2025-01-12 16:55:43,387 - INFO - Extracted Root Tip Coordinates for test_image_8.png: [array([9.48275000e+00, 1.33371249e+02, 5.70000000e-02]), array([3.07400174e+01, 1.37056220e+02, 5.70000000e-02]), array([8.04493198e+01, 9.48958150e+01, 5.70000000e-02]), array([8.93337674e+01, 1.19390035e+02, 5.70000000e-02]), array([1.31085221e+02, 6.31942254e+01, 5.70000000e-02])]
+2025-01-12 16:55:43,387 - INFO - Processing image: test_image_9.png
+2025-01-12 16:55:51,218 - INFO - Extracted Root Tip Coordinates for test_image_9.png: [array([2.34279787e+01, 5.81715596e+01, 5.70000000e-02]), array([47.60596301, 55.37886359,  0.057     ]), array([7.55902375e+01, 6.20920752e+01, 5.70000000e-02]), array([1.06094169e+02, 5.08675854e+01, 5.70000000e-02]), array([1.31934055e+02, 6.07494329e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,219 - INFO - All Extracted Root Tip Coordinates:
+2025-01-12 16:55:51,221 - INFO - test_image_1.png: [array([ 6.89359458, 43.06671185,  0.057     ]), array([23.2015114 , 54.59262704,  0.057     ]), array([28.18144573, 31.97573686,  0.057     ]), array([7.61201542e+01, 3.94784552e+01, 5.70000000e-02]), array([1.42501037e+02, 2.61040442e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,221 - INFO - test_image_10.png: [array([1.46895942e+01, 9.01801525e+01, 5.70000000e-02]), array([3.22199730e+01, 1.15797768e+02, 5.70000000e-02]), array([7.14622890e+01, 1.07097446e+02, 5.70000000e-02]), array([1.0775607e+02, 9.6732247e+01, 5.7000000e-02]), array([1.35579516e+02, 8.87838045e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,222 - INFO - test_image_11.png: [array([7.83030989e+00, 1.17194116e+02, 5.70000000e-02]), array([3.45374962e+01, 1.11286490e+02, 5.70000000e-02]), array([1.02056266e+02, 1.16012591e+02, 5.70000000e-02]), array([1.14927199e+02, 1.10427199e+02, 5.70000000e-02]), array([1.43618655e+02, 1.43885845e+02, 5.70000000e-02])]
+2025-01-12 16:55:51,223 - INFO - test_image_12.png: [array([2.39640759e+01, 7.67274728e+01, 5.70000000e-02]), array([4.51399158e+01, 8.03807679e+01, 5.70000000e-02]), array([7.40355556e+01, 7.16236046e+01, 5.70000000e-02]), array([9.35494941e+01, 7.35577020e+01, 5.70000000e-02]), array([1.24857571e+02, 7.45784756e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,225 - INFO - test_image_13.png: [array([1.87639330e+01, 1.00115706e+02, 5.70000000e-02]), array([4.92142546e+01, 8.86763931e+01, 5.70000000e-02]), array([7.02292654e+01, 8.38965865e+01, 5.70000000e-02]), array([1.04539487e+02, 9.58729560e+01, 5.70000000e-02]), array([1.23785377e+02, 1.04251044e+02, 5.70000000e-02])]
+2025-01-12 16:55:51,225 - INFO - test_image_14.png: [array([6.48958768e+00, 7.53573813e+01, 5.70000000e-02]), array([7.24039212e+00, 9.00727411e+01, 5.70000000e-02]), array([1.67863342e+01, 7.02553405e+01, 5.70000000e-02]), array([1.31605784e+02, 1.40254801e+01, 5.70000000e-02]), array([1.32624732e+02, 9.72902470e+00, 5.70000000e-02])]
+2025-01-12 16:55:51,226 - INFO - test_image_15.png: [array([7.93756766e+00, 1.23477682e+02, 5.70000000e-02]), array([8.95651654e+00, 6.37032460e+01, 5.70000000e-02]), array([4.29080327e+00, 7.67000236e+01, 5.70000000e-02]), array([2.00576964e+01, 9.41006681e+01, 5.70000000e-02]), array([1.47479934e+02, 1.32607650e+02, 5.70000000e-02])]
+2025-01-12 16:55:51,226 - INFO - test_image_16.png: [array([1.39926678e+01, 1.34165115e+02, 5.70000000e-02]), array([22.30217459, 46.78595274,  0.057     ]), array([1.03735341e+02, 4.94712374e+01, 5.70000000e-02]), array([1.32362932e+02, 4.70544812e+01, 5.70000000e-02]), array([1.43889022e+02, 1.27774137e+02, 5.70000000e-02])]
+2025-01-12 16:55:51,226 - INFO - test_image_17.png: [array([1.60298372e+01, 5.94817708e+01, 5.70000000e-02]), array([4.54615742e+01, 6.24903668e+01, 5.70000000e-02]), array([7.37138972e+01, 6.63585616e+01, 5.70000000e-02]), array([1.04914755e+02, 6.46930888e+01, 5.70000000e-02]), array([1.24428694e+02, 6.21680172e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,226 - INFO - test_image_18.png: [array([1.41048898e+01, 1.15582945e+02, 5.70000000e-02]), array([1.66790764e+01, 5.83863824e+01, 5.70000000e-02]), array([5.05725337e+01, 8.32521182e+01, 5.70000000e-02]), array([1.06882866e+02, 9.66248357e+01, 5.70000000e-02]), array([1.34394486e+02, 9.67322470e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,226 - INFO - test_image_2.png: [array([6.47567453e+00, 8.24457000e+01, 5.70000000e-02]), array([48.92850472, 33.05875442,  0.057     ]), array([6.79778516e+01, 7.23843945e+01, 5.70000000e-02]), array([1.00742728e+02, 1.01865101e+02, 5.70000000e-02]), array([1.20064209e+02, 9.05055629e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,226 - INFO - test_image_3.png: [array([20.83323305, 36.21835179,  0.057     ]), array([7.60100468e+01, 3.14952248e+01, 5.70000000e-02]), array([1.03352373e+02, 3.37753550e+01, 5.70000000e-02]), array([1.31952446e+02, 3.19295353e+01, 5.70000000e-02]), array([1.37256857e+02, 2.18861042e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,232 - INFO - test_image_4.png: [array([22.04299918, 44.34204331,  0.057     ]), array([50.90804101, 43.42179791,  0.057     ]), array([7.64445998e+01, 3.93618917e+01, 5.70000000e-02]), array([9.97985467e+01, 4.30970054e+01, 5.70000000e-02]), array([1.31992072e+02, 3.41652118e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,233 - INFO - test_image_5.png: [array([21.76957874, 44.00139394,  0.057     ]), array([47.18685015, 40.97109091,  0.057     ]), array([7.45090562e+01, 3.19884069e+01, 5.70000000e-02]), array([1.01504702e+02, 3.95641645e+01, 5.70000000e-02]), array([1.33616458e+02, 3.87524762e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,234 - INFO - test_image_6.png: [array([21.35729595, 44.65512839,  0.057     ]), array([43.47861814, 52.95530922,  0.057     ]), array([7.14844300e+01, 5.29010597e+01, 5.70000000e-02]), array([1.00307532e+02, 5.14905714e+01, 5.70000000e-02]), array([1.28694746e+02, 4.19969005e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,236 - INFO - test_image_7.png: [array([20.96831645, 50.11628882,  0.057     ]), array([47.22103976, 37.79272747,  0.057     ]), array([7.54345474e+01, 3.22552682e+01, 5.70000000e-02]), array([1.05173109e+02, 4.96276895e+01, 5.70000000e-02]), array([1.3175263e+02, 5.3916506e+01, 5.7000000e-02])]
+2025-01-12 16:55:51,236 - INFO - test_image_8.png: [array([9.48275000e+00, 1.33371249e+02, 5.70000000e-02]), array([3.07400174e+01, 1.37056220e+02, 5.70000000e-02]), array([8.04493198e+01, 9.48958150e+01, 5.70000000e-02]), array([8.93337674e+01, 1.19390035e+02, 5.70000000e-02]), array([1.31085221e+02, 6.31942254e+01, 5.70000000e-02])]
+2025-01-12 16:55:51,236 - INFO - test_image_9.png: [array([2.34279787e+01, 5.81715596e+01, 5.70000000e-02]), array([47.60596301, 55.37886359,  0.057     ]), array([7.55902375e+01, 6.20920752e+01, 5.70000000e-02]), array([1.06094169e+02, 5.08675854e+01, 5.70000000e-02]), array([1.31934055e+02, 6.07494329e+01, 5.70000000e-02])]
+2025-01-12 17:11:12,666 - INFO - Enabled memory growth for GPU.
+2025-01-12 17:11:13,170 - INFO - Processing image: test_image_1.png
+2025-01-12 17:11:20,499 - INFO - Extracted Root Tip Coordinates for test_image_1.png: [[6.8935945822692455, 43.06671185212033, 0.057], [23.201511400948558, 54.59262703878216, 0.057], [28.18144573148486, 31.975736861181588, 0.057], [76.1201542320321, 39.47845523740485, 0.057], [142.5010371214885, 26.1040442189199, 0.057]]
+2025-01-12 17:11:20,500 - INFO - Processing image: test_image_10.png
+2025-01-12 17:11:28,595 - INFO - Extracted Root Tip Coordinates for test_image_10.png: [[14.689594174410292, 90.18015252416755, 0.057], [32.21997301644031, 115.79776799140708, 0.057], [71.46228895639742, 107.09744575725027, 0.057], [107.7560702287348, 96.73224704618688, 0.057], [135.57951554681915, 88.78380451127819, 0.057]]
+2025-01-12 17:11:28,596 - INFO - Processing image: test_image_11.png
+2025-01-12 17:11:36,677 - INFO - Extracted Root Tip Coordinates for test_image_11.png: [[7.8303098855917055, 117.19411600429645, 0.057], [34.537496156596355, 111.28648979591836, 0.057], [102.0562662674294, 116.01259076262083, 0.057], [114.92719941008224, 110.42719871106337, 0.057], [143.6186545405792, 143.88584532760473, 0.057]]
+2025-01-12 17:11:36,677 - INFO - Processing image: test_image_12.png
+2025-01-12 17:11:44,733 - INFO - Extracted Root Tip Coordinates for test_image_12.png: [[23.964075947105073, 76.72747277936962, 0.057], [45.13991583273767, 80.38076790830945, 0.057], [74.035555575411, 71.62360458452721, 0.057], [93.54949410293065, 73.55770200573065, 0.057], [124.85757130092922, 74.57847564469914, 0.057]]
+2025-01-12 17:11:44,734 - INFO - Processing image: test_image_13.png
+2025-01-12 17:11:52,777 - INFO - Extracted Root Tip Coordinates for test_image_13.png: [[18.763932987848463, 100.11570569280343, 0.057], [49.21425464617584, 88.67639312567131, 0.057], [70.22926536812008, 83.89658646616542, 0.057], [104.53948695496783, 95.8729559613319, 0.057], [123.78537687634024, 104.2510440386681, 0.057]]
+2025-01-12 17:11:52,782 - INFO - Processing image: test_image_14.png
+2025-01-12 17:12:00,981 - INFO - Extracted Root Tip Coordinates for test_image_14.png: [[6.489587683232035, 75.3573813104189, 0.057], [7.24039211655345, 90.07274113856069, 0.057], [16.786334197354307, 70.25534049409237, 0.057], [131.60578360743656, 14.025480128893662, 0.057], [132.6247324812299, 9.72902470461869, 0.057]]
+2025-01-12 17:12:00,982 - INFO - Processing image: test_image_15.png
+2025-01-12 17:12:08,857 - INFO - Extracted Root Tip Coordinates for test_image_15.png: [[7.93756766178048, 123.4776820622986, 0.057], [8.95651653557383, 63.703245972073034, 0.057], [4.290803271362174, 76.70002363050483, 0.057], [20.057696371111906, 94.10066809881847, 0.057], [147.47993448337505, 132.60764983888294, 0.057]]
+2025-01-12 17:12:08,857 - INFO - Processing image: test_image_16.png
+2025-01-12 17:12:16,628 - INFO - Extracted Root Tip Coordinates for test_image_16.png: [[13.992667798427448, 134.1651149301826, 0.057], [22.302174588992134, 46.78595273899033, 0.057], [103.73534113652607, 49.47123737916219, 0.057], [132.3629322730522, 47.05448120300751, 0.057], [143.88902233738384, 127.77413748657357, 0.057]]
+2025-01-12 17:12:16,630 - INFO - Processing image: test_image_17.png
+2025-01-12 17:12:24,602 - INFO - Extracted Root Tip Coordinates for test_image_17.png: [[16.02983720514653, 59.481770773638964, 0.057], [45.46157416011437, 62.49036676217764, 0.057], [73.7138972480343, 66.35856160458452, 0.057], [104.91475500357397, 64.6930888252149, 0.057], [124.42869353109363, 62.16801719197707, 0.057]]
+2025-01-12 17:12:24,603 - INFO - Processing image: test_image_18.png
+2025-01-12 17:12:32,596 - INFO - Extracted Root Tip Coordinates for test_image_18.png: [[14.104889792634966, 115.58294522019334, 0.057], [16.679076421165533, 58.38638238453276, 0.057], [50.57253369681803, 83.25211815252416, 0.057], [106.88286619592421, 96.62483566058002, 0.057], [134.39448578834467, 96.73224704618688, 0.057]]
+2025-01-12 17:12:32,600 - INFO - Processing image: test_image_2.png
+2025-01-12 17:12:40,567 - INFO - Extracted Root Tip Coordinates for test_image_2.png: [[6.475674528301886, 82.44569996393797, 0.057], [48.92850471698113, 33.058754417598266, 0.057], [67.97785159651669, 72.38439451857194, 0.057], [100.74272822931785, 101.86510133429498, 0.057], [120.0642086357039, 90.50556292823656, 0.057]]
+2025-01-12 17:12:40,568 - INFO - Processing image: test_image_3.png
+2025-01-12 17:12:48,324 - INFO - Extracted Root Tip Coordinates for test_image_3.png: [[20.83323304775793, 36.21835179153094, 0.057], [76.01004675537732, 31.495224755700328, 0.057], [103.35237267590229, 33.775355048859936, 0.057], [131.95244558877144, 31.92953528773073, 0.057], [137.25685681735328, 21.88610423452769, 0.057]]
+2025-01-12 17:12:48,325 - INFO - Processing image: test_image_4.png
+2025-01-12 17:12:56,281 - INFO - Extracted Root Tip Coordinates for test_image_4.png: [[22.042999181520553, 44.342043305665825, 0.057], [50.90804101491452, 43.42179790689282, 0.057], [76.44459976355037, 39.361891735835435, 0.057], [99.79854665332847, 43.09700541320823, 0.057], [131.99207157148055, 34.165211836881994, 0.057]]
+2025-01-12 17:12:56,283 - INFO - Processing image: test_image_5.png
+2025-01-12 17:13:04,149 - INFO - Extracted Root Tip Coordinates for test_image_5.png: [[21.769578737300435, 44.001393939393935, 0.057], [47.18685014513788, 40.971090909090904, 0.057], [74.50905624092887, 31.988406926406928, 0.057], [101.50470210449926, 39.5641645021645, 0.057], [133.61645827285923, 38.75247619047619, 0.057]]
+2025-01-12 17:13:04,149 - INFO - Processing image: test_image_6.png
+2025-01-12 17:13:12,093 - INFO - Extracted Root Tip Coordinates for test_image_6.png: [[21.357295949872864, 44.655128390596744, 0.057], [43.47861814384308, 52.955309222423146, 0.057], [71.48442998547038, 52.90105967450271, 0.057], [100.30753205593896, 51.49057142857143, 0.057], [128.69474600435888, 41.996900542495474, 0.057]]
+2025-01-12 17:13:12,094 - INFO - Processing image: test_image_7.png
+2025-01-12 17:13:20,127 - INFO - Extracted Root Tip Coordinates for test_image_7.png: [[20.968316448801744, 50.116288816503804, 0.057], [47.22103976034859, 37.79272747014115, 0.057], [75.43454738562092, 32.255268186753526, 0.057], [105.17310947712419, 49.627689467969596, 0.057], [131.75263017429197, 53.916505971769816, 0.057]]
+2025-01-12 17:13:20,128 - INFO - Processing image: test_image_8.png
+2025-01-12 17:13:28,239 - INFO - Extracted Root Tip Coordinates for test_image_8.png: [[9.48275, 133.3712485549133, 0.057], [30.740017441860463, 137.0562196531792, 0.057], [80.44931976744185, 94.89581502890174, 0.057], [89.33376744186046, 119.39003468208092, 0.057], [131.08522093023257, 63.19422543352601, 0.057]]
+2025-01-12 17:13:28,239 - INFO - Processing image: test_image_9.png
+2025-01-12 17:13:36,249 - INFO - Extracted Root Tip Coordinates for test_image_9.png: [[23.427978734810576, 58.17155961331901, 0.057], [47.60596300929235, 55.37886358754027, 0.057], [75.59023749106504, 62.09207518796992, 0.057], [106.09416887062186, 50.86758539205155, 0.057], [131.9340545032166, 60.74943286788399, 0.057]]
+2025-01-12 17:13:36,251 - INFO - Saved root tip coordinates to root_tip_coordinates.json
+2025-01-12 17:30:05,991 - INFO - Starting Petri dish extraction...
+2025-01-12 17:30:05,992 - INFO - Output directory created: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted
+2025-01-12 17:30:05,993 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_1.png
+2025-01-12 17:30:06,346 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_1.png
+2025-01-12 17:30:06,346 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_10.png
+2025-01-12 17:30:06,737 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_10.png
+2025-01-12 17:30:06,737 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_11.png
+2025-01-12 17:30:07,147 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_11.png
+2025-01-12 17:30:07,147 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_12.png
+2025-01-12 17:30:07,532 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_12.png
+2025-01-12 17:30:07,532 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_13.png
+2025-01-12 17:30:07,929 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_13.png
+2025-01-12 17:30:07,929 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_14.png
+2025-01-12 17:30:08,323 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_14.png
+2025-01-12 17:30:08,324 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_15.png
+2025-01-12 17:30:08,724 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_15.png
+2025-01-12 17:30:08,725 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_16.png
+2025-01-12 17:30:09,116 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_16.png
+2025-01-12 17:30:09,116 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_17.png
+2025-01-12 17:30:09,500 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_17.png
+2025-01-12 17:30:09,500 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_18.png
+2025-01-12 17:30:09,902 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_18.png
+2025-01-12 17:30:09,902 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_2.png
+2025-01-12 17:30:10,252 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_2.png
+2025-01-12 17:30:10,254 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_3.png
+2025-01-12 17:30:10,602 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_3.png
+2025-01-12 17:30:10,602 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_4.png
+2025-01-12 17:30:10,964 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_4.png
+2025-01-12 17:30:10,964 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_5.png
+2025-01-12 17:30:11,314 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_5.png
+2025-01-12 17:30:11,314 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_6.png
+2025-01-12 17:30:11,679 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_6.png
+2025-01-12 17:30:11,679 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_7.png
+2025-01-12 17:30:12,032 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_7.png
+2025-01-12 17:30:12,032 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_8.png
+2025-01-12 17:30:12,390 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_8.png
+2025-01-12 17:30:12,390 - INFO - Preprocessing image: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test\test_image_9.png
+2025-01-12 17:30:12,785 - INFO - Processed and saved: C:\Users\szala\Documents\GitHub\renforcement_learning_232430\kaggle_test_extracted\test_image_9.png
+2025-01-12 17:30:12,790 - INFO - Petri dish extraction completed.
