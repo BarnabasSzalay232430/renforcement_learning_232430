@@ -5,6 +5,7 @@ from pid_class import PIDController
 from sim_class import Simulation
 import os
 
+
 # Logging configuration
 logging.basicConfig(
     level=logging.INFO,
@@ -46,19 +47,23 @@ def plot_response(time_steps, responses, goal_position, title):
 
 def run_pid_simulation(pid_gains, time_step, goal_position, max_iterations=1000, accuracy_threshold=0.001, hold_duration=50, enable_render=True):
     """
-    Runs a simulation with the PID controller to move the pipette to the goal position.
+    Simulates the PID controller for a pipette to move to a target position.
 
-    Parameters:
-        pid_gains (dict): PID gains for each axis {'Kp': [...], 'Ki': [...], 'Kd': [...]}.
+    Args:
+        pid_gains (dict): PID gains for X, Y, Z axes in the format {'Kp': [...], 'Ki': [...], 'Kd': [...]}.
         time_step (float): Time interval for PID updates.
-        goal_position (list): Desired target position [x, y, z].
-        max_iterations (int): Maximum iterations to run the simulation.
-        accuracy_threshold (float): Distance threshold to consider goal achieved.
-        hold_duration (int): Number of consecutive steps within the threshold to confirm success.
-        enable_render (bool): Flag to enable simulation rendering.
+        goal_position (list): Target position [X, Y, Z] in meters.
+        max_iterations (int): Maximum steps to run the simulation.
+        accuracy_threshold (float): Accuracy requirement for reaching the target.
+        hold_duration (int): Consecutive steps the system must stay within the threshold.
+        enable_render (bool): Flag to enable rendering the simulation environment.
 
     Returns:
-        dict: Simulation results including success status, steps to goal, and recorded data.
+        dict: Simulation results containing:
+            - 'success' (bool): Whether the target was successfully reached.
+            - 'steps_to_goal' (int): Steps required to reach the goal (if successful).
+            - 'responses' (list): List of positions during the simulation.
+            - 'time_steps' (list): List of time steps during the simulation.
     """
     simulation = Simulation(num_agents=1, render=enable_render)
     controller = PIDController(pid_gains['Kp'], pid_gains['Ki'], pid_gains['Kd'], time_step)
@@ -88,6 +93,7 @@ def run_pid_simulation(pid_gains, time_step, goal_position, max_iterations=1000,
 
         if distance_to_goal <= accuracy_threshold:
             in_threshold_counter += 1
+            logging.debug(f"Within accuracy threshold for {in_threshold_counter} consecutive steps.")
             if in_threshold_counter >= hold_duration:
                 logging.info(f"Goal reached successfully at step {iteration + 1}.")
                 simulation.close()
@@ -164,7 +170,7 @@ if __name__ == "__main__":
     }
     time_step = 1.0
 
-    test_count = 5
+    test_count = 1
     hold_duration = 50
 
     execute_multiple_pid_tests(
