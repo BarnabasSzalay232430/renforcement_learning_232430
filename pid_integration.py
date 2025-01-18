@@ -1,119 +1,103 @@
 import numpy as np
+import matplotlib.pyplot as plt
 import logging
 from pid_class import PIDController
-from ot2_class import OT2Env
 
-# Set up logging
-log_file = "adaptive_pid_optimized_ot2.log"
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler(log_file)
-    ]
-)
+def simulate_pid_response(pid_controller, setpoint, timesteps, accuracy_threshold=0.01):
+    dt = pid_controller.dt
+    state = np.zeros(3)
+    responses = []
+    errors = []
+    goal_reached = False
+    steps_to_goal = None
 
-logging.info("Starting Optimized PID Controller Test with OT2Env")
+    for t in range(timesteps):
+        error = np.array(setpoint) - state
+        control_signal = pid_controller.compute(state, setpoint)
+        state += control_signal * dt  # Simplified system dynamics
 
-# Initialize the OT2 environment
-env = OT2Env()
+        responses.append(state.copy())
+        errors.append(np.linalg.norm(error))
 
-# Initialize PID controllers with starting parameters
-pid_x = PIDController(Kp=10, Ki=0.1, Kd=2, dt=0.5, integral_limit=5.0)
-pid_y = PIDController(Kp=10, Ki=0.1, Kd=2, dt=0.5, integral_limit=5.0)
-pid_z = PIDController(Kp=10, Ki=0.1, Kd=2, dt=0.5, integral_limit=1.0)
+        if not goal_reached and np.linalg.norm(error) <= accuracy_threshold:
+            goal_reached = True
+            steps_to_goal = t
 
-# Test one random target position
-target_position = np.array([np.random.uniform(-0.1872, 0.253),
-                            np.random.uniform(-0.1705, 0.2195),
-                            np.random.uniform(0.1693, 0.2895)], dtype=np.float32)
-logging.info(f"Generated Target Position: {target_position}")
-
-# Set PID setpoints
-pid_x.setpoint = target_position[0]
-pid_y.setpoint = target_position[1]
-pid_z.setpoint = target_position[2]
-
-# Reset the environment
-observation, info = env.reset()
-
-# Initialize loop variables
-terminated = False
-epoch = 0
-all_error = 0
-recent_errors = []
-
-# Simulation loop with improvements
-while not terminated and epoch < 200:
-    epoch += 1
-
-    # Current pipette position
-    current_position = observation[:3]
-
-    # Compute individual axis errors
-    error_x = abs(target_position[0] - current_position[0])
-    error_y = abs(target_position[1] - current_position[1])
-    error_z = abs(target_position[2] - current_position[2])
-    error = np.linalg.norm(target_position - current_position)
-    all_error += error
-
-    # Log errors and coordinates
-    logging.info(f"Epoch: {epoch}")
-    logging.info(f"Current Position: X={current_position[0]:.4f}, Y={current_position[1]:.4f}, Z={current_position[2]:.4f}")
-    logging.info(f"Errors: X={error_x:.4f}, Y={error_y:.4f}, Z={error_z:.4f}")
-    logging.info(f"Euclidean Error: {error:.4f}")
-
-    # Success criterion
-    if error <= 0.005:
-        logging.info(f"Target reached successfully in {epoch} epochs. Final Error: {error:.4f}")
-        break
-
-    # Adjust PID parameters dynamically
-    if error > 0.1:
-        pid_x.Ki, pid_x.Kd = 0.20, 3
-        pid_y.Ki, pid_y.Kd = 0.20, 3
-        pid_z.Ki, pid_z.Kd = 0.18, 2.8
-    elif 0.05 < error <= 0.1:
-        pid_x.Ki, pid_x.Kd = 0.12, 1.8
-        pid_y.Ki, pid_y.Kd = 0.12, 1.8
-        pid_z.Ki, pid_z.Kd = 0.1, 1.5
-    else:
-        pid_x.Ki, pid_x.Kd = 0.1, 1.2
-        pid_y.Ki, pid_y.Kd = 0.1, 1.2
-        pid_z.Ki, pid_z.Kd = 0.08, 1.0
-
-    # Compute control actions with action saturation
-    control_x = np.clip(pid_x.compute(current_position[0]), -1, 1)
-    control_y = np.clip(pid_y.compute(current_position[1]), -1, 1)
-    control_z = np.clip(pid_z.compute(current_position[2]), -1, 1)
-    action = np.array([control_x, control_y, control_z])
-
-    # Take a step in the environment
-    observation, _, terminated, truncated, _ = env.step(action)
+    return np.array(responses), np.array(errors), goal_reached, steps_to_goal
 
 
-    # Track recent errors for early termination
-    recent_errors.append(error)
-    if len(recent_errors) > 20:
-        recent_errors.pop(0)
-        avg_error_change = abs(recent_errors[-1] - recent_errors[0]) / 5
-        if avg_error_change < 0.0005:
-            logging.info(f"Terminating early due to negligible error change after {epoch} epochs.")
-            break
+def analyze_and_plot_response(responses, setpoint, title):
+    timesteps = len(responses)
+    time = np.linspace(0, timesteps * 0.1, timesteps)  # Adjust time scaling if needed
+    steady_state = setpoint
 
-    # Handle truncation
-    if truncated:
-        logging.warning("Environment truncated. Resetting...")
-        observation, info = env.reset()
-        pid_x.setpoint = target_position[0]
-        pid_y.setpoint = target_position[1]
-        pid_z.setpoint = target_position[2]
+    metrics = []
+    for i in range(3):  # For x, y, z axes
+        axis_response = responses[:, i]
 
-# Log final results
-logging.info(f"Final Position: {current_position}")
-logging.info(f"Final Error: {error:.4f}")
-logging.info(f"Total Error Across Epochs: {all_error:.4f}")
-logging.info(f"Total Epochs: {epoch}")
+        # Calculate rise time
+        rise_time = next((t for t, y in enumerate(axis_response) if y >= 0.9 * steady_state[i]), None)
 
-print("Optimized PID Controller Test Complete. Check the log file for details.")
+        # Calculate settling time
+        settling_time = next(
+            (t for t, y in enumerate(axis_response) if np.all(np.abs(axis_response[t:] - steady_state[i]) <= 0.02 * steady_state[i])),
+            None
+        )
+
+        # Calculate overshoot
+        overshoot = np.max(axis_response) - steady_state[i]
+
+        metrics.append((rise_time, settling_time, overshoot))
+
+        # Plot each axis response
+        plt.figure(figsize=(6, 4))
+        plt.plot(time, axis_response, label=f"Axis {i+1} Response")
+        plt.axhline(setpoint[i], color="red", linestyle="--", label="Setpoint")
+        plt.axhline(0.9 * steady_state[i], color="green", linestyle=":", label="90% of Setpoint")
+        plt.axhline(1.02 * steady_state[i], color="blue", linestyle=":", label="2% Band")
+        plt.axhline(0.98 * steady_state[i], color="blue", linestyle=":")
+        plt.title(f"{title} - Axis {i+1}")
+        plt.xlabel("Time (s)")
+        plt.ylabel("Response")
+        plt.legend()
+        plt.grid()
+        plt.show()
+
+    return metrics
+
+
+def main():
+    logging.basicConfig(level=logging.INFO)
+
+    # PID configurations
+    timesteps = 200
+    setpoint = np.array([1.0, 1.0, 1.0])
+
+    # Slow response (low Kp, no Ki, no Kd)
+    pid_slow = PIDController(Kp=[0.5, 0.5, 0.5], Ki=[0.0, 0.0, 0.0], Kd=[0.0, 0.0, 0.0], dt=0.1)
+    response_slow, errors_slow, goal_reached_slow, steps_to_goal_slow = simulate_pid_response(pid_slow, setpoint, timesteps)
+    metrics_slow = analyze_and_plot_response(response_slow, setpoint, "Slow Response (Low Kp)")
+
+    # Oscillatory response (high Kp, low Kd)
+    pid_oscillatory = PIDController(Kp=[2.0, 2.0, 2.0], Ki=[0.0, 0.0, 0.0], Kd=[0.2, 0.2, 0.2], dt=0.1)
+    response_oscillatory, errors_oscillatory, goal_reached_oscillatory, steps_to_goal_oscillatory = simulate_pid_response(pid_oscillatory, setpoint, timesteps)
+    metrics_oscillatory = analyze_and_plot_response(response_oscillatory, setpoint, "Oscillatory Response (High Kp, Low Kd)")
+
+    # Tuned response (balanced Kp, Ki, Kd)
+    pid_tuned = PIDController(Kp=[1.0, 1.0, 1.0], Ki=[0.1, 0.1, 0.1], Kd=[0.5, 0.5, 0.5], dt=0.1)
+    response_tuned, errors_tuned, goal_reached_tuned, steps_to_goal_tuned = simulate_pid_response(pid_tuned, setpoint, timesteps)
+    metrics_tuned = analyze_and_plot_response(response_tuned, setpoint, "Tuned Response (Balanced Kp, Ki, Kd)")
+
+    # Log results
+    logging.info(f"Slow Response Metrics: {metrics_slow}")
+    logging.info(f"Slow Response Goal Reached: {goal_reached_slow}, Steps to Goal: {steps_to_goal_slow}")
+
+    logging.info(f"Oscillatory Response Metrics: {metrics_oscillatory}")
+    logging.info(f"Oscillatory Response Goal Reached: {goal_reached_oscillatory}, Steps to Goal: {steps_to_goal_oscillatory}")
+
+    logging.info(f"Tuned Response Metrics: {metrics_tuned}")
+    logging.info(f"Tuned Response Goal Reached: {goal_reached_tuned}, Steps to Goal: {steps_to_goal_tuned}")
+
+
+if __name__ == "__main__":
+    main()

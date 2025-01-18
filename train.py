@@ -27,17 +27,18 @@ run = wandb.init(project="ot2_digital_twin", sync_tensorboard=True)
 
 # ----------------- Environment Setup -----------------
 # Wrap the environment with VecNormalize for observation and reward normalization
-env = DummyVecEnv([lambda: OT2Env(render=False)])
-env = VecNormalize(env, norm_obs=True, norm_reward=True, clip_obs=10.0)
+env = OT2Env()
 
+# Create dir to store models
+model_dir = f"models/{run.id}"
+os.makedirs(model_dir, exist_ok=True)
 # ----------------- Argument Parsing -----------------
 parser = argparse.ArgumentParser()
 parser.add_argument("--learning_rate", type=float, default=0.0003, help="Learning rate for the PPO model")
 parser.add_argument("--batch_size", type=int, default=64, help="Batch size for the PPO model")
 parser.add_argument("--n_steps", type=int, default=2048, help="Number of steps per PPO update")
 parser.add_argument("--n_epochs", type=int, default=10, help="Number of epochs for PPO optimization")
-parser.add_argument("--gamma", type=float, default=0.99, help="Discount factor for rewards")
-parser.add_argument("--clip_range", type=float, default=0.2, help="Clipping range for PPO")
+parser.add_argument("--timesteps", type=int, default=1_500_000)
 args, _ = parser.parse_known_args()
 
 def linear_schedule(initial_value):
@@ -53,25 +54,18 @@ def linear_schedule(initial_value):
 
 
 # ----------------- PPO Model Setup -----------------
+# Define PPO
 model = PPO(
-    "MlpPolicy",
+    'MlpPolicy',
     env,
-    verbose=1,
-    learning_rate=linear_schedule(0.0003),  # Linear decay from 0.0003
-    batch_size=64,
-    n_steps=2048,
-    n_epochs=10,
-    gamma=0.99,
-    clip_range=0.2,
-    ent_coef=0.01,
-    tensorboard_log=f"runs/model_v5_adjusted",
+    verbose=1, 
+    learning_rate=args.learning_rate, 
+    batch_size=args.batch_size, 
+    n_steps=args.n_steps, 
+    n_epochs=args.n_epochs, 
+    tensorboard_log=f"runs/{run.id}",
 )
 
-
-
-# Directory for saving models
-model_dir = f"models/{run.id}"
-os.makedirs(model_dir, exist_ok=True)
 
 # ----------------- Callbacks -----------------
 class CustomRewardLoggingCallback(BaseCallback):
