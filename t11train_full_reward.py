@@ -21,7 +21,7 @@ task.set_base_docker('deanis/2023y2b-rl:latest')
 task.execute_remotely(queue_name="default")
 
 # WandB
-os.environ['WANDB_API_KEY'] = '11c5fccd0b07e41fc8bef045f744781d2f777121'
+os.environ['WANDB_API_KEY'] = 'cf5a05958641f64764dafe6badc9e911b54d9644'
 run = wandb.init(project="RL_train_more_reward",sync_tensorboard=True)
 
 # Create dir to store models
