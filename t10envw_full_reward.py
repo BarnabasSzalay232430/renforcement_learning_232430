@@ -4,7 +4,6 @@ from gymnasium import spaces
 from sim_class import Simulation
 import random
 import math
-import rl_functions as do
 
 
 class OT2Env(gym.Env):
