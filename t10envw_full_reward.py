@@ -15,12 +15,12 @@ class OT2Env(gym.Env):
         # Initialize the simulation
         self.sim_sim = Simulation(num_agents=1, render=False)
 
-        self.x_min = do.find_limit(self.sim_sim, axis=0, direction=-1, silence=True)
-        self.x_max = do.find_limit(self.sim_sim, axis=0, direction=1, silence=True)
-        self.y_min = do.find_limit(self.sim_sim, axis=1, direction=-1, silence=True)
-        self.y_max = do.find_limit(self.sim_sim, axis=1, direction=1, silence=True)
-        self.z_min = do.find_limit(self.sim_sim, axis=2, direction=-1, silence=True)
-        self.z_max = do.find_limit(self.sim_sim, axis=2, direction=1, silence=True)
+        self.x_min = -0.1872
+        self.x_max = 0.253
+        self.y_min = -0.1705
+        self.y_max = 0.2195
+        self.z_min = 0.1693
+        self.z_max = 0.2895
 
         self.sim_sim.close()
 

@@ -2,102 +2,174 @@ import numpy as np
 import matplotlib.pyplot as plt
 import logging
 from pid_class import PIDController
+from sim_class import Simulation
+import os
 
-def simulate_pid_response(pid_controller, setpoint, timesteps, accuracy_threshold=0.01):
-    dt = pid_controller.dt
-    state = np.zeros(3)
+# Logging configuration
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler("pid_test2_log.log")
+    ]
+)
+
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_dir)
+
+print("Current working directory:", os.getcwd())
+
+def plot_response(time_steps, responses, goal_position, title):
+    """
+    Plots the PID response for visualization.
+
+    Parameters:
+        time_steps (list): Time steps of the simulation.
+        responses (list): Recorded responses during the simulation.
+        goal_position (list): Desired target position [x, y, z].
+        title (str): Title of the graph.
+    """
+    responses = np.array(responses)
+    plt.figure(figsize=(10, 6))
+    for i, axis in enumerate(['X', 'Y', 'Z']):
+        plt.plot(time_steps, responses[:, i], label=f"{axis} Position")
+        plt.axhline(goal_position[i], color="red", linestyle="--", label=f"{axis} Setpoint" if i == 0 else None)
+
+    plt.title(title)
+    plt.xlabel("Time Steps")
+    plt.ylabel("Position")
+    plt.legend()
+    plt.grid()
+    plt.show()
+
+def run_pid_simulation(pid_gains, time_step, goal_position, max_iterations=1000, accuracy_threshold=0.001, hold_duration=50, enable_render=True):
+    """
+    Runs a simulation with the PID controller to move the pipette to the goal position.
+
+    Parameters:
+        pid_gains (dict): PID gains for each axis {'Kp': [...], 'Ki': [...], 'Kd': [...]}.
+        time_step (float): Time interval for PID updates.
+        goal_position (list): Desired target position [x, y, z].
+        max_iterations (int): Maximum iterations to run the simulation.
+        accuracy_threshold (float): Distance threshold to consider goal achieved.
+        hold_duration (int): Number of consecutive steps within the threshold to confirm success.
+        enable_render (bool): Flag to enable simulation rendering.
+
+    Returns:
+        dict: Simulation results including success status, steps to goal, and recorded data.
+    """
+    simulation = Simulation(num_agents=1, render=enable_render)
+    controller = PIDController(pid_gains['Kp'], pid_gains['Ki'], pid_gains['Kd'], time_step)
+
+    state = simulation.reset(num_agents=1)
+    agent_id = int(list(state.keys())[0].split('_')[-1])
+    current_position = np.array(simulation.get_pipette_position(agent_id))
+
+    controller.reset()
+    in_threshold_counter = 0
     responses = []
-    errors = []
-    goal_reached = False
-    steps_to_goal = None
+    time_steps = []
 
-    for t in range(timesteps):
-        error = np.array(setpoint) - state
-        control_signal = pid_controller.compute(state, setpoint)
-        state += control_signal * dt  # Simplified system dynamics
+    logging.info(f"Starting simulation with target position: {goal_position}")
+    for iteration in range(max_iterations):
+        control_signals = controller.compute(current_position, goal_position)
+        action = np.clip(control_signals, -1, 1)
+        action_with_dummy = np.concatenate([action, [0.0]])
+        state = simulation.run([action_with_dummy])
 
-        responses.append(state.copy())
-        errors.append(np.linalg.norm(error))
+        current_position = np.array(simulation.get_pipette_position(agent_id))
+        responses.append(current_position)
+        time_steps.append(iteration * time_step)
 
-        if not goal_reached and np.linalg.norm(error) <= accuracy_threshold:
-            goal_reached = True
-            steps_to_goal = t
+        distance_to_goal = np.linalg.norm(current_position - goal_position)
+        logging.info(f"Step {iteration + 1}: Current Position: {current_position}, Distance to Goal: {distance_to_goal:.6f}")
 
-    return np.array(responses), np.array(errors), goal_reached, steps_to_goal
+        if distance_to_goal <= accuracy_threshold:
+            in_threshold_counter += 1
+            if in_threshold_counter >= hold_duration:
+                logging.info(f"Goal reached successfully at step {iteration + 1}.")
+                simulation.close()
+                plot_response(time_steps, responses, goal_position, "PID Simulation Result")
+                return {
+                    "success": True,
+                    "steps_to_goal": iteration + 1,
+                    "responses": responses,
+                    "time_steps": time_steps
+                }
+        else:
+            in_threshold_counter = 0
 
+    logging.warning("Maximum iterations reached. Goal not achieved.")
+    simulation.close()
+    plot_response(time_steps, responses, goal_position, "PID Simulation Result")
+    return {
+        "success": False,
+        "steps_to_goal": None,
+        "responses": responses,
+        "time_steps": time_steps
+    }
 
-def analyze_and_plot_response(responses, setpoint, title):
-    timesteps = len(responses)
-    time = np.linspace(0, timesteps * 0.1, timesteps)  # Adjust time scaling if needed
-    steady_state = setpoint
+def execute_multiple_pid_tests(gain_values, time_step, test_count=1, hold_duration=50):
+    """
+    Executes multiple tests of the PID controller with random goal positions.
 
-    metrics = []
-    for i in range(3):  # For x, y, z axes
-        axis_response = responses[:, i]
+    Parameters:
+        gain_values (dict): PID gain values {'Kp': [...], 'Ki': [...], 'Kd': [...]}.
+        time_step (float): Time interval for PID updates.
+        test_count (int): Number of tests to execute.
+        hold_duration (int): Number of steps to confirm goal achievement.
 
-        # Calculate rise time
-        rise_time = next((t for t, y in enumerate(axis_response) if y >= 0.9 * steady_state[i]), None)
+    Logs:
+        Number of successful tests and corresponding goal positions.
+    """
+    position_bounds = {
+        "x": (-0.1872, 0.253),
+        "y": (-0.1705, 0.2195),
+        "z": (0.1693, 0.2895)
+    }
 
-        # Calculate settling time
-        settling_time = next(
-            (t for t, y in enumerate(axis_response) if np.all(np.abs(axis_response[t:] - steady_state[i]) <= 0.02 * steady_state[i])),
-            None
+    successes = 0
+    logging.info("Starting multiple PID tests.")
+
+    for test_index in range(test_count):
+        goal_position = [
+            np.random.uniform(*position_bounds["x"]),
+            np.random.uniform(*position_bounds["y"]),
+            np.random.uniform(*position_bounds["z"])
+        ]
+
+        logging.info(f"Test {test_index + 1}/{test_count}: Target position: {goal_position}")
+        result = run_pid_simulation(
+            pid_gains=gain_values,
+            time_step=time_step,
+            goal_position=goal_position,
+            hold_duration=hold_duration
         )
 
-        # Calculate overshoot
-        overshoot = np.max(axis_response) - steady_state[i]
+        if result["success"]:
+            logging.info(f"Test {test_index + 1}: Success! Steps to goal: {result['steps_to_goal']}")
+            successes += 1
+        else:
+            logging.info(f"Test {test_index + 1}: Failure.")
 
-        metrics.append((rise_time, settling_time, overshoot))
-
-        # Plot each axis response
-        plt.figure(figsize=(6, 4))
-        plt.plot(time, axis_response, label=f"Axis {i+1} Response")
-        plt.axhline(setpoint[i], color="red", linestyle="--", label="Setpoint")
-        plt.axhline(0.9 * steady_state[i], color="green", linestyle=":", label="90% of Setpoint")
-        plt.axhline(1.02 * steady_state[i], color="blue", linestyle=":", label="2% Band")
-        plt.axhline(0.98 * steady_state[i], color="blue", linestyle=":")
-        plt.title(f"{title} - Axis {i+1}")
-        plt.xlabel("Time (s)")
-        plt.ylabel("Response")
-        plt.legend()
-        plt.grid()
-        plt.show()
-
-    return metrics
-
-
-def main():
-    logging.basicConfig(level=logging.INFO)
-
-    # PID configurations
-    timesteps = 200
-    setpoint = np.array([1.0, 1.0, 1.0])
-
-    # Slow response (low Kp, no Ki, no Kd)
-    pid_slow = PIDController(Kp=[0.5, 0.5, 0.5], Ki=[0.0, 0.0, 0.0], Kd=[0.0, 0.0, 0.0], dt=0.1)
-    response_slow, errors_slow, goal_reached_slow, steps_to_goal_slow = simulate_pid_response(pid_slow, setpoint, timesteps)
-    metrics_slow = analyze_and_plot_response(response_slow, setpoint, "Slow Response (Low Kp)")
-
-    # Oscillatory response (high Kp, low Kd)
-    pid_oscillatory = PIDController(Kp=[2.0, 2.0, 2.0], Ki=[0.0, 0.0, 0.0], Kd=[0.2, 0.2, 0.2], dt=0.1)
-    response_oscillatory, errors_oscillatory, goal_reached_oscillatory, steps_to_goal_oscillatory = simulate_pid_response(pid_oscillatory, setpoint, timesteps)
-    metrics_oscillatory = analyze_and_plot_response(response_oscillatory, setpoint, "Oscillatory Response (High Kp, Low Kd)")
-
-    # Tuned response (balanced Kp, Ki, Kd)
-    pid_tuned = PIDController(Kp=[1.0, 1.0, 1.0], Ki=[0.1, 0.1, 0.1], Kd=[0.5, 0.5, 0.5], dt=0.1)
-    response_tuned, errors_tuned, goal_reached_tuned, steps_to_goal_tuned = simulate_pid_response(pid_tuned, setpoint, timesteps)
-    metrics_tuned = analyze_and_plot_response(response_tuned, setpoint, "Tuned Response (Balanced Kp, Ki, Kd)")
-
-    # Log results
-    logging.info(f"Slow Response Metrics: {metrics_slow}")
-    logging.info(f"Slow Response Goal Reached: {goal_reached_slow}, Steps to Goal: {steps_to_goal_slow}")
-
-    logging.info(f"Oscillatory Response Metrics: {metrics_oscillatory}")
-    logging.info(f"Oscillatory Response Goal Reached: {goal_reached_oscillatory}, Steps to Goal: {steps_to_goal_oscillatory}")
-
-    logging.info(f"Tuned Response Metrics: {metrics_tuned}")
-    logging.info(f"Tuned Response Goal Reached: {goal_reached_tuned}, Steps to Goal: {steps_to_goal_tuned}")
-
+    logging.info(f"PID Tests Complete: {successes}/{test_count} tests successful.")
 
 if __name__ == "__main__":
-    main()
+    pid_gains = {
+        "Kp": [12.0, 12.0, 12.0],
+        "Ki": [0.0, 0.0, 0.0],
+        "Kd": [0.0, 0.0, 0.0]
+    }
+    time_step = 1.0
+
+    test_count = 5
+    hold_duration = 50
+
+    execute_multiple_pid_tests(
+        gain_values=pid_gains,
+        time_step=time_step,
+        test_count=test_count,
+        hold_duration=hold_duration
+    )
