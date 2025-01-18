@@ -1,7 +1,7 @@
 import time
 import numpy as np
 from stable_baselines3 import PPO
-from ot2_class import OT2Env
+from t10envw_full_reward import OT2Env
 import os
 import wandb
 from wandb.integration.sb3 import WandbCallback
