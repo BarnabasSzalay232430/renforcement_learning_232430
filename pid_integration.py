@@ -164,9 +164,9 @@ def execute_multiple_pid_tests(gain_values, time_step, test_count=1, hold_durati
 
 if __name__ == "__main__":
     pid_gains = {
-        "Kp": [12.0, 12.0, 12.0],
+        "Kp": [15.0, 15.0, 15.0],
         "Ki": [0.0, 0.0, 0.0],
-        "Kd": [0.0, 0.0, 0.0]
+        "Kd": [0.8, 0.8, 0.8]
     }
     time_step = 1.0
 
