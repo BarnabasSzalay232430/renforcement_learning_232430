@@ -28,7 +28,7 @@ class Simulation:
         random_texture = random.choice(texture_list[:-1])
         random_texture_index = texture_list.index(random_texture)
         self.plate_image_path = f'textures/_plates/{os.listdir("textures/_plates")[random_texture_index]}'
-        self.textureId = p.loadTexture(f'textures/{random_texture}')
+        self.textureId = p.loadTexture(r'C:\Users\szala\Documents\GitHub\renforcement_learning_232430\textures\04.png')
         #print(f'textureId: {self.textureId}')
 
         # Set the camera parameters
@@ -430,6 +430,8 @@ class Simulation:
             p.resetJointState(robotId, 1, targetValue=adjusted_y)
             p.resetJointState(robotId, 2, targetValue=adjusted_z)
 
+
+
     # function to return the path of the current plate image
     def get_plate_image(self):
         return self.plate_image_path
@@ -437,17 +439,3 @@ class Simulation:
     # close the simulation
     def close(self):
         p.disconnect()
-
-
-
-
-
-
-
-
-
-
-    
-
-
-

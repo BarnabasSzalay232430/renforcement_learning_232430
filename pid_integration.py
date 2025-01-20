@@ -46,30 +46,20 @@ def plot_response(time_steps, responses, goal_position, title):
     plt.show()
 
 def run_pid_simulation(pid_gains, time_step, goal_position, max_iterations=1000, accuracy_threshold=0.001, hold_duration=50, enable_render=True):
-    """
-    Simulates the PID controller for a pipette to move to a target position.
-
-    Args:
-        pid_gains (dict): PID gains for X, Y, Z axes in the format {'Kp': [...], 'Ki': [...], 'Kd': [...]}.
-        time_step (float): Time interval for PID updates.
-        goal_position (list): Target position [X, Y, Z] in meters.
-        max_iterations (int): Maximum steps to run the simulation.
-        accuracy_threshold (float): Accuracy requirement for reaching the target.
-        hold_duration (int): Consecutive steps the system must stay within the threshold.
-        enable_render (bool): Flag to enable rendering the simulation environment.
-
-    Returns:
-        dict: Simulation results containing:
-            - 'success' (bool): Whether the target was successfully reached.
-            - 'steps_to_goal' (int): Steps required to reach the goal (if successful).
-            - 'responses' (list): List of positions during the simulation.
-            - 'time_steps' (list): List of time steps during the simulation.
-    """
     simulation = Simulation(num_agents=1, render=enable_render)
+
+
     controller = PIDController(pid_gains['Kp'], pid_gains['Ki'], pid_gains['Kd'], time_step)
 
     state = simulation.reset(num_agents=1)
     agent_id = int(list(state.keys())[0].split('_')[-1])
+    current_position = np.array(simulation.get_pipette_position(agent_id))
+
+    # Set the starting position for the pipette
+    start_position = [0.10775, 0.062, 0.17]
+    simulation.set_start_position(0.10775, 0.062, 0.17)
+
+    # Update current position to reflect the starting position
     current_position = np.array(simulation.get_pipette_position(agent_id))
 
     controller.reset()
@@ -93,7 +83,6 @@ def run_pid_simulation(pid_gains, time_step, goal_position, max_iterations=1000,
 
         if distance_to_goal <= accuracy_threshold:
             in_threshold_counter += 1
-            logging.debug(f"Within accuracy threshold for {in_threshold_counter} consecutive steps.")
             if in_threshold_counter >= hold_duration:
                 logging.info(f"Goal reached successfully at step {iteration + 1}.")
                 simulation.close()
@@ -116,6 +105,7 @@ def run_pid_simulation(pid_gains, time_step, goal_position, max_iterations=1000,
         "responses": responses,
         "time_steps": time_steps
     }
+
 
 def execute_multiple_pid_tests(gain_values, time_step, test_count=1, hold_duration=50):
     """
@@ -140,11 +130,7 @@ def execute_multiple_pid_tests(gain_values, time_step, test_count=1, hold_durati
     logging.info("Starting multiple PID tests.")
 
     for test_index in range(test_count):
-        goal_position = [
-            np.random.uniform(*position_bounds["x"]),
-            np.random.uniform(*position_bounds["y"]),
-            np.random.uniform(*position_bounds["z"])
-        ]
+        goal_position = [0.24633, 0.19179, 0.17000]
 
         logging.info(f"Test {test_index + 1}/{test_count}: Target position: {goal_position}")
         result = run_pid_simulation(
